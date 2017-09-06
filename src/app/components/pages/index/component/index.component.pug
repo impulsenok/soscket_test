@@ -1,1 +1,9 @@
 p Test index page content here
+
+input(type="text", maxlength="30", [(ngModel)]="chatMessage")
+
+button.ui-button-danger((click)="sendSocketMessage()") Send message
+
+
+div
+    p(*ngFor="let message of allMessages") {{ message }}

@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { FormsModule }  from "@angular/forms";
 
 import { INDEX_ROUTES } from "./index.route";
 
@@ -10,6 +11,7 @@ import { ComponentsProviderModule } from "../../../providers/components-provider
 @NgModule({
     imports: [
         CommonModule,
+        FormsModule,
         ComponentsProviderModule,
         INDEX_ROUTES
     ],

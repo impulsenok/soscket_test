@@ -24,6 +24,8 @@ const app = express();
 
 const server         = require('http').Server(app);
 
+const io             = require("socket.io")(server);
+
 app.use(userAgent.express());
 
 // ACCESS logging: redirect default express morgan to mainStream Logs method to write log to 'logs.access' log.
@@ -39,6 +41,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+io.on('connection', (socket) => {
+
+    console.log('\n\n\n\n\n\n user connected \n\n\n\n');
+
+    socket.on('disconnect', () => {
+        console.log('User disconnected');
+    });
+    socket.on('save-message', (data) => {
+        io.emit('new-message', { message: data });
+    });
+});
+
 
 app.use('/', require('server/routes/index'));
 app.use('/login', require('server/routes/login'));
