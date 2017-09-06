@@ -1,0 +1,34 @@
+2017-09-06 11:42:33 +03:00 - info: [2017-09-06 11:42:33 +03:00]: <unknown ip> - (::1) "GET / HTTP/1.1" 200 662 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-06 11:42:33 +03:00 - info: [2017-09-06 11:42:33 +03:00]: <unknown ip> - (::1) "GET /robots.txt HTTP/1.1" 200 662 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-06 11:42:33 +03:00 - info: [2017-09-06 11:42:33 +03:00]: <unknown ip> - (::1) "GET /styles/bootstrap.min.css HTTP/1.1" 200 122413 "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-06 11:42:33 +03:00 - info: [2017-09-06 11:42:33 +03:00]: <unknown ip> - (::1) "GET /app.0037896bb5f59cbd670f.js HTTP/1.1" 200 30138 "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-06 11:42:33 +03:00 - info: [2017-09-06 11:42:33 +03:00]: <unknown ip> - (::1) "GET /polyfills.0037896bb5f59cbd670f.js HTTP/1.1" 200 116781 "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-06 11:42:33 +03:00 - info: [2017-09-06 11:42:33 +03:00]: <unknown ip> - (::1) "GET /vendor.0037896bb5f59cbd670f.js HTTP/1.1" 200 1133399 "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-06 11:42:35 +03:00 - info: [2017-09-06 11:42:35 +03:00]: <unknown ip> - (::1) "GET /assets/styles/css/fonts.css HTTP/1.1" 200 662 "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-06 11:42:35 +03:00 - info: [2017-09-06 11:42:35 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 200 662 "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-06 11:42:41 +03:00 - info: [2017-09-06 11:42:41 +03:00]: <unknown ip> - (::1) "GET /styles/bootstrap.min.css HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-06 11:43:24 +03:00 - info: [2017-09-06 11:43:24 +03:00]: <unknown ip> - (::1) "GET / HTTP/1.1" 200 652 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-06 11:43:24 +03:00 - info: [2017-09-06 11:43:24 +03:00]: <unknown ip> - (::1) "GET /styles/bootstrap.min.css HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-06 11:43:24 +03:00 - info: [2017-09-06 11:43:24 +03:00]: <unknown ip> - (::1) "GET /app.c9b82539ccb652d85585.js HTTP/1.1" 200 30138 "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-06 11:43:24 +03:00 - info: [2017-09-06 11:43:24 +03:00]: <unknown ip> - (::1) "GET /polyfills.c9b82539ccb652d85585.js HTTP/1.1" 200 116781 "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-06 11:43:24 +03:00 - info: [2017-09-06 11:43:24 +03:00]: <unknown ip> - (::1) "GET /vendor.c9b82539ccb652d85585.js HTTP/1.1" 200 1133399 "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-06 11:43:25 +03:00 - info: [2017-09-06 11:43:25 +03:00]: <unknown ip> - (::1) "GET /assets/styles/css/fonts.css HTTP/1.1" 200 652 "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-06 11:43:25 +03:00 - info: [2017-09-06 11:43:25 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 200 652 "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-06 11:43:25 +03:00 - info: [2017-09-06 11:43:25 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
