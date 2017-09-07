@@ -1,9 +1,16 @@
-p Test index page content here
+.container
 
-input(type="text", maxlength="30", [(ngModel)]="chatMessage")
+    div.col-md-3
+        p Test index page content here
 
-button.ui-button-danger((click)="sendSocketMessage()") Send message
+        form
+            input(type="text", maxlength="30", name="message", [(ngModel)]="chatMessage")
 
+            button.ui-button-danger(type="submit", (click)="sendSocketMessage()") Send message
 
-div
-    p(*ngFor="let message of allMessages") {{ message }}
+        div
+            p(*ngFor="let message of allMessages") {{ message }}
+
+    div.col-md-9
+        hero
+        playground

@@ -5,6 +5,8 @@ import { FormsModule }  from "@angular/forms";
 import { INDEX_ROUTES } from "./index.route";
 
 import { IndexComponent } from "./component/index.component";
+import { HeroComponent }  from "../../items/hero/hero.component";
+import { PlaygroundComponent } from "../../items/playground/playground.component";
 
 import { ComponentsProviderModule } from "../../../providers/components-provider.module";
 
@@ -16,7 +18,9 @@ import { ComponentsProviderModule } from "../../../providers/components-provider
         INDEX_ROUTES
     ],
     declarations: [
-        IndexComponent
+        IndexComponent,
+        HeroComponent,
+        PlaygroundComponent
     ]
 })
 

@@ -4,7 +4,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { IndexComponent }       from "./component/index.component";
 
 const MODULE_ROUTES: Routes = [{
-    path: "",
+    path: "fun",
     component: IndexComponent
 }];
 

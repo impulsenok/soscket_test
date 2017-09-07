@@ -1,0 +1,12 @@
+#heroContainer{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 32px;
+  width: 32px;
+  background: url('../images/good_enemies_2.png') -192px 0;
+  /*background-position-x: -224px;*/
+  /*background-position-y: -128px;*/
+  z-index: 12;
+}

@@ -16,11 +16,16 @@ export class IndexComponent implements OnInit {
 
     constructor(private socketService: SocketService) {}
 
+
+
     ngOnInit(): void {
         this.getMessageSUBSCRIBER = this.socketService.getMessage().subscribe(result => { this.allMessages.push(result.message) })
     }
 
-    public sendSocketMessage(): void { this.socketService.sendMessage(this.chatMessage) }
+    public sendSocketMessage(): void {
+        this.socketService.sendMessage(this.chatMessage);
+        this.chatMessage = null;
+    }
 
     ngOnDestroy(): void {
         if (this.getMessageSUBSCRIBER) this.getMessageSUBSCRIBER.unsubscribe();
