@@ -3,6 +3,7 @@ import { BrowserModule }         from "@angular/platform-browser";
 import { HttpClientModule }      from "@angular/common/http"
 
 import { SocketIoModule, SocketIoConfig } from "ng-socket-io";
+import { LocalStorageModule }    from "angular-2-local-storage";
 
 import { ROUTER }                from "./lib/app.routing";
 
@@ -16,6 +17,7 @@ import { PageNotFoundComponent } from "./components/pages/404/404.component";
 
 import { SocketService }         from "./services/socket.service";
 import { KeyPressHandlerService }from "./services/keypress-handler.service";
+import { HeroService }           from "./components/items/hero/hero.service";
 
 import { CONFIG } from "./lib/app.config";
 
@@ -26,6 +28,10 @@ const socketConfig: SocketIoConfig = { url: CONFIG.socketServerUrl, options: {} 
         BrowserModule,
         HttpClientModule,
         SocketIoModule.forRoot(socketConfig),
+        LocalStorageModule.withConfig({
+            prefix: 'socket-fun',
+            storageType: 'localStorage'
+        }),
         ROUTER,
 
         LayoutModule,
@@ -39,7 +45,8 @@ const socketConfig: SocketIoConfig = { url: CONFIG.socketServerUrl, options: {} 
     ],
     providers: [
         SocketService,
-        KeyPressHandlerService
+        KeyPressHandlerService,
+        HeroService
     ],
     bootstrap: [
         LayoutComponent

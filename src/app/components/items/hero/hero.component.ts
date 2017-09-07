@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewEncapsulation, HostListener, Renderer2, AfterViewInit } from "@angular/core";
 
 import { KeyPressHandlerService } from "../../../services/keypress-handler.service";
+import {LocalStorageProcessingService} from "../../../services/local-storage.service";
 
 @Component({
     selector: "hero",
@@ -10,11 +11,19 @@ import { KeyPressHandlerService } from "../../../services/keypress-handler.servi
 })
 export class HeroComponent implements AfterViewInit {
 
+    private heroData: any = null;
+
     constructor(private keyActionService: KeyPressHandlerService,
                 private renderer: Renderer2,
-                private heroElement: ElementRef) {}
+                private heroElement: ElementRef,
+                private localStorage: LocalStorageProcessingService) {
 
-    @HostListener('document:keyup', ['$event']) onKeyUp(ev:KeyboardEvent) { this.keyActionService.handleAction(ev, this.heroElement) }
+        this.heroData = this.localStorage.getHeroData();
+    }
 
-    ngAfterViewInit(): void { console.log('renderrer: ', this.renderer) }
+    @HostListener('document:keydown', ['$event']) onKeyUp(ev:KeyboardEvent) { this.keyActionService.handleAction(ev, this.heroElement, this.heroData) }
+
+    ngAfterViewInit(): void {
+        this.heroElement.nativeElement.childNodes[0].style.background = `url('../images/${this.heroData.img_name}') -${(this.heroData.sprite.firstMovementFrameColumn-1)*this.heroData.oneFrameHeight}px ${(this.heroData.sprite.downMove.row-1)*this.heroData.oneFrameHeight}px`
+        console.log('renderrer: ', this.renderer) }
 }

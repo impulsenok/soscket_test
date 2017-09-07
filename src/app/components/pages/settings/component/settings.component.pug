@@ -1,7 +1,22 @@
 .container
 
-    div.col-md-12.greeting
-        p.text-center Are u ready?
+    div.col-md-12.settings
 
         .text-center
-            button(routerLink="/fun") Let's fuuuun yeeeahhhh mazafaka!!!
+
+            p Set up your super nickname!
+
+            input(type="text", name="nickname", [(ngModel)]="nickname", maxlength="5", placeholder="max 5 symbols")
+
+            p chooooose your super-hero then!!!
+
+        .col-md-3(*ngFor="let hero of heroes")
+            .hero((click)="selectHero(hero)", [ngClass]="{'selected': checkIfHeroSelected(hero)}")
+                img([ngStyle]="setHeroStyle(hero)")
+                | {{ hero.name }}
+
+        .clearfix
+        br
+
+        .text-center
+            button(routerLink="/fun", (click)="saveData()", *ngIf="validate()") Let's fuuuun yeeeahhhh mazafaka!!!
