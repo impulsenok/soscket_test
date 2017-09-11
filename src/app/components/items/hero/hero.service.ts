@@ -37,7 +37,7 @@ export class HeroService {
 
     public moveDown(heroElement, heroData): void {
         this.heroMovementAnimation(heroElement, heroData);
-        heroElement.style.backgroundPositionY = `-${(heroData.sprite.downMove.row - 1) * heroData.oneFrameHeight}px`;
+        heroElement.style["background-position-y"] = `-${(heroData.sprite.downMove.row - 1) * heroData.oneFrameHeight}px`;
         heroData.heroPosition.positionOnPlayGroundY += heroData.stepLength;
         heroElement.style.top = `${heroData.heroPosition.positionOnPlayGroundY}px`;
     }

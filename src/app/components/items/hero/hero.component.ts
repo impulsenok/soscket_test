@@ -1,6 +1,7 @@
-import { Component, ElementRef, ViewEncapsulation, HostListener, Renderer2, AfterViewInit } from "@angular/core";
+import {Component, ElementRef, ViewEncapsulation, HostListener, AfterViewInit, OnInit} from "@angular/core";
 
 import { KeyPressHandlerService } from "../../../services/keypress-handler.service";
+import {SocketService} from "../../../services/socket.service";
 import {LocalStorageProcessingService} from "../../../services/local-storage.service";
 
 @Component({
@@ -9,21 +10,26 @@ import {LocalStorageProcessingService} from "../../../services/local-storage.ser
     styleUrls: [ "hero.component.scss" ],
     encapsulation: ViewEncapsulation.None
 })
-export class HeroComponent implements AfterViewInit {
+export class HeroComponent implements AfterViewInit, OnInit {
 
     private heroData: any = null;
+    private userName: string = null;
 
     constructor(private keyActionService: KeyPressHandlerService,
-                private renderer: Renderer2,
-                private heroElement: ElementRef,
-                private localStorage: LocalStorageProcessingService) {
+                private socket: SocketService,
+                private localStorageService: LocalStorageProcessingService,
+                private heroElement: ElementRef) {}
 
-        this.heroData = this.localStorage.getHeroData();
+    @HostListener('document:keydown', ['$event']) onKeyUp(ev:KeyboardEvent) {
+        if (this.userName == this.localStorageService.getNickName()) this.socket.heroAction({eventCode: ev.keyCode, hero: this.heroData});
     }
 
-    @HostListener('document:keydown', ['$event']) onKeyUp(ev:KeyboardEvent) { this.keyActionService.handleAction(ev, this.heroElement, this.heroData) }
+    ngOnInit(): void { console.log('this is hero onInit : ', this.heroData, this.userName) }
 
     ngAfterViewInit(): void {
+
+        console.log('heroes: ', this.heroElement);
+
         this.heroElement.nativeElement.childNodes[0].style.background = `url('../images/${this.heroData.img_name}') -${(this.heroData.sprite.firstMovementFrameColumn-1)*this.heroData.oneFrameHeight}px ${(this.heroData.sprite.downMove.row-1)*this.heroData.oneFrameHeight}px`
-        console.log('renderrer: ', this.renderer) }
+    }
 }

@@ -47,12 +47,13 @@ io.on('connection', (socket) => {
 
     console.log('\n\n\n\n\n\n user connected \n\n\n\n');
 
-    socket.on('disconnect', () => {
-        console.log('User disconnected');
-    });
-    socket.on('save-message', (data) => {
-        io.emit('new-message', { message: data });
-    });
+    socket.on('disconnect', () => console.log('User disconnected'));
+
+    socket.on('save-message', (data) => io.emit('new-message', { message: data }));
+
+    socket.on('create-hero', (data) => io.emit('receive-new-hero', {heroData: data.heroData, userName: data.userName}));
+
+    socket.on('hero-action', (data) => io.emit('hero-acted', {heroData: data}));
 });
 
 

@@ -9,6 +9,7 @@ import { SettingsComponent } from "./component/settings.component";
 import { ComponentsProviderModule } from "../../../providers/components-provider.module";
 
 import {LocalStorageProcessingService} from "../../../services/local-storage.service";
+import {SettingsService} from "./component/settings.service";
 
 @NgModule({
     imports: [
@@ -20,7 +21,10 @@ import {LocalStorageProcessingService} from "../../../services/local-storage.ser
     declarations: [
         SettingsComponent
     ],
-    providers: [LocalStorageProcessingService]
+    providers: [
+        LocalStorageProcessingService,
+        SettingsService
+    ]
 })
 
 export class SettingsModule {}

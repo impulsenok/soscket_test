@@ -21,6 +21,9 @@ import { ComponentsProviderModule } from "../../../providers/components-provider
         IndexComponent,
         HeroComponent,
         PlaygroundComponent
+    ],
+    entryComponents: [
+        HeroComponent
     ]
 })
 

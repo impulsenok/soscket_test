@@ -4,6 +4,7 @@ import { Component, ViewEncapsulation } from "@angular/core";
     selector: "playground",
     template: require("./playground.component.pug"),
     styleUrls: [ "playground.component.scss" ],
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
+    exportAs: "heroesContainer"
 })
 export class PlaygroundComponent {}
