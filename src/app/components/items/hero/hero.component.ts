@@ -2,6 +2,7 @@ import {Component, ElementRef, ViewEncapsulation, HostListener, AfterViewInit, O
 
 import {SocketService} from "../../../services/socket.service";
 import {LocalStorageProcessingService} from "../../../services/local-storage.service";
+import {HeroService} from "./hero.service";
 
 @Component({
     selector: "hero",
@@ -15,6 +16,7 @@ export class HeroComponent implements AfterViewInit, OnInit {
 
     constructor(private socket: SocketService,
                 private localStorageService: LocalStorageProcessingService,
+                private heroService: HeroService,
                 private heroElement: ElementRef) {}
 
     @HostListener('document:keydown', ['$event']) onKeyUp(ev:KeyboardEvent) {
@@ -25,5 +27,6 @@ export class HeroComponent implements AfterViewInit, OnInit {
 
     ngAfterViewInit(): void {
         this.heroElement.nativeElement.childNodes[0].style.background = `url('../images/${this.data.hero.img_name}') -${(this.data.hero.sprite.firstMovementFrameColumn-1)*this.data.hero.oneFrameHeight}px ${(this.data.hero.sprite.downMove.row-1)*this.data.hero.oneFrameHeight}px`
+        this.heroService.setHeroStyles(this.heroElement.nativeElement.childNodes[0], this.data);
     }
 }

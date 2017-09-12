@@ -5,12 +5,11 @@ import {SocketService} from "./socket.service";
 @Injectable()
 export class LocalStorageProcessingService {
 
-    constructor(private localStorage: LocalStorageService,
-                private socket: SocketService) {}
+    constructor(private localStorage: LocalStorageService) {}
 
-    savePlayerData(data): void {
-        this.localStorage.set('playerData', JSON.stringify(data))
+    savePlayerData(data: any): void {
+        this.localStorage.set('playerData', data)
     }
 
-    getPlayerData(): any { return this.localStorage.get('playerData') ? JSON.parse(this.localStorage.get('playerData')) : null }
+    getPlayerData(): any { return this.localStorage.get('playerData') ? this.localStorage.get('playerData') : null }
 }

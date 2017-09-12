@@ -11,11 +11,9 @@ export class KeyPressHandlerService {
                 private localStorage: LocalStorageProcessingService,
                 private socket: SocketService) {}
 
-    public handleAction(keyCode: KeyboardEvent, heroEl: any, heroPlayerData: any): void {
+    public handleAction(keyCode: number, heroEl: any, heroPlayerData: any): void {
 
         let heroElement = heroEl[0];
-
-        // console.log('>>>>>>  ', keyCode, heroPlayerData, heroElement);
 
         if (!heroElement) return;
 
@@ -44,12 +42,9 @@ export class KeyPressHandlerService {
             case 32: console.log('space clicked here');
                 break;
 
-            default: console.log("unhandled key was pressed");
+            default: /*console.log("unhandled key was pressed")*/;
         }
 
-        if (heroPlayerData.user.id == this.localStorage.getPlayerData().id) {
-            // this.localStorage.saveHeroPlayerData(heroPlayerData);
-            this.socket.saveHeroPlayerData(heroPlayerData)
-        }
+        if (heroPlayerData.user.id == this.localStorage.getPlayerData().id) { this.socket.saveHeroPlayerData(heroPlayerData) }
     }
 }

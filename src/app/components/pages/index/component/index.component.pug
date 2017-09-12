@@ -9,7 +9,9 @@
             button.ui-button-danger(type="submit", (click)="sendSocketMessage()") Send message
 
         div
-            p(*ngFor="let message of allMessages") {{ message }}
+            p(*ngFor="let message of allMessages")
+                span.author {{message.user}}:
+                span  {{ message.message }}
 
     div.col-md-9
         playground(#heroesContainer="heroesContainer")

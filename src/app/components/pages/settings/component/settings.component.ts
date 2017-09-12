@@ -38,14 +38,7 @@ export class SettingsComponent implements OnInit {
 
     selectHero(hero: any): void { this.hero = hero }
 
-    checkIfHeroSelected(hero): boolean {
-
-        // const heroData = this.localStorage.getPlayerData();
-        //
-        // if (heroData && heroData.hero) return hero.name == heroData.hero.name;
-        //
-        return false;
-    }
+    checkIfHeroSelected(heroListItem: any): boolean { return this.hero && this.hero.name == heroListItem.name }
 
     saveData(): void {
         this.user.id = this.settingsService.generateUserId(this.user.name);
@@ -53,7 +46,7 @@ export class SettingsComponent implements OnInit {
         this.socket.saveHeroPlayerData({hero: this.hero, user: this.user});
     }
 
-    validate(): boolean { return true/*!!this.hero.name && !!this.hero*/ }
+    validate(): boolean { return !!this.user.name && !!this.hero }
 
     ngOnDestroy(): void {}
 }

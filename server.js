@@ -49,15 +49,32 @@ io.on('connection', (socket) => {
 
     console.log('\n user connected \n');
 
-    console.log('\n\n \n\n', io.sockets.sockets)
+    io.clients((err, clients) => {
+        console.log('\n\n \n\n', clients, '\n\n\n')
+    });
 
-    socket.on('disconnect', () => console.log('\n User disconnected \n'));
+    socket.on('disconnect', subscriber => console.log('\n User disconnected:  \n', subscriber, '\n\n\n'));
 
-    socket.on('save-message', (data) => io.emit('new-message', { message: data }));
+    socket.on('save-message', (data) => {
+        console.log('\n\n\n', data)
+        io.emit('new-message', {user: data.user, message: data.message})
+    });
 
     socket.on('create-hero', (playerData) => {
 
-        io.emit('receive-new-hero', heroes[playerData.id]);
+        // broadcast to all subscribers if new hero appeared
+        io.emit('receive-new-hero', {heroes: [heroes[playerData.id]]})
+    });
+
+    socket.on('get-all-heroes', (data) => {
+
+        let allHeroesKeys = Object.keys(heroes);
+        let result = [];
+
+        allHeroesKeys.forEach(key => { if (heroes[key].user.id != data.id) result.push(heroes[key]) });
+
+        // emit to current socket(current subscriber) only
+        socket.emit('receive-new-hero', {heroes: result})
     });
 
     socket.on('hero-action', (data) => {
