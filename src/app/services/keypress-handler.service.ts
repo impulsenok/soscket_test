@@ -1,41 +1,43 @@
 import { Injectable } from "@angular/core";
 
 import { HeroService } from "../components/items/hero/hero.service";
+import {LocalStorageProcessingService} from "./local-storage.service";
+import {SocketService} from "./socket.service";
 
 @Injectable()
 export class KeyPressHandlerService {
 
-    constructor(private heroService: HeroService) {}
+    constructor(private heroService: HeroService,
+                private localStorage: LocalStorageProcessingService,
+                private socket: SocketService) {}
 
-    public handleAction(keyCode: KeyboardEvent, heroEl: any, hero: any): void {
+    public handleAction(keyCode: KeyboardEvent, heroEl: any, heroPlayerData: any): void {
 
         let heroElement = heroEl[0];
 
-        console.log('>>>>>>  ', keyCode, hero, heroElement);
+        // console.log('>>>>>>  ', keyCode, heroPlayerData, heroElement);
 
         if (!heroElement) return;
 
-        hero.heroPosition = {
-            positionOnPlayGroundY: heroElement.style.top ? parseInt(heroElement.style.top) : 0,
-            positionOnPlayGroundX: heroElement.style.left ? parseInt(heroElement.style.left) : 0
-        };
+        if (heroElement.style.top) heroPlayerData.hero.positionOnPlayGround.positionOnPlayGroundY = parseInt(heroElement.style.top);
+        if (heroElement.style.left) heroPlayerData.hero.positionOnPlayGround.positionOnPlayGroundX = parseInt(heroElement.style.left);
 
         switch(keyCode) {
 
             // UP
-            case 38: { this.heroService.moveTop(heroElement, hero) }
+            case 38: { this.heroService.moveTop(heroElement, heroPlayerData) }
                 break;
 
             // DOWN
-            case 40: { this.heroService.moveDown(heroElement, hero) }
+            case 40: { this.heroService.moveDown(heroElement, heroPlayerData) }
                 break;
 
             // LEFT
-            case 37: { this.heroService.moveLeft(heroElement, hero) }
+            case 37: { this.heroService.moveLeft(heroElement, heroPlayerData) }
                 break;
 
             // RIGHT
-            case 39: { this.heroService.moveRight(heroElement, hero) }
+            case 39: { this.heroService.moveRight(heroElement, heroPlayerData) }
                 break;
 
             // SPACE
@@ -45,6 +47,9 @@ export class KeyPressHandlerService {
             default: console.log("unhandled key was pressed");
         }
 
-        console.log('an event was received here: ');
+        if (heroPlayerData.user.id == this.localStorage.getPlayerData().id) {
+            // this.localStorage.saveHeroPlayerData(heroPlayerData);
+            this.socket.saveHeroPlayerData(heroPlayerData)
+        }
     }
 }

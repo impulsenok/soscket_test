@@ -43,17 +43,31 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+let heroes = {};
+
 io.on('connection', (socket) => {
 
-    console.log('\n\n\n\n\n\n user connected \n\n\n\n');
+    console.log('\n user connected \n');
 
-    socket.on('disconnect', () => console.log('User disconnected'));
+    console.log('\n\n \n\n', io.sockets.sockets)
+
+    socket.on('disconnect', () => console.log('\n User disconnected \n'));
 
     socket.on('save-message', (data) => io.emit('new-message', { message: data }));
 
-    socket.on('create-hero', (data) => io.emit('receive-new-hero', {heroData: data.heroData, userName: data.userName}));
+    socket.on('create-hero', (playerData) => {
 
-    socket.on('hero-action', (data) => io.emit('hero-acted', {heroData: data}));
+        io.emit('receive-new-hero', heroes[playerData.id]);
+    });
+
+    socket.on('hero-action', (data) => {
+
+        let heroPlayerData = heroes[data.heroPlayerData.user.id];
+
+        io.emit('hero-acted', {eventCode: data.eventCode, heroPlayerData})
+    });
+
+    socket.on('update-hero-data', data => heroes[data.user.id] = data);
 });
 
 

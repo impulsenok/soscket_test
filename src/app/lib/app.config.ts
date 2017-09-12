@@ -1,5 +1,5 @@
 export const CONFIG = {
-    // socketServerUrl: 'http://172.16.1.159:8609'
+    // socketServerUrl: 'http://172.16.1.159:8609',
     socketServerUrl: 'localhost:8609',
     heroes: {
         'death_king': {
@@ -26,6 +26,10 @@ export const CONFIG = {
                 rightMove: {
                     row: 3
                 }
+            },
+            positionOnPlayGround: {
+                positionOnPlayGroundY: 0,
+                positionOnPlayGroundX: 0
             }
         },
         'death': {
@@ -52,6 +56,10 @@ export const CONFIG = {
                 rightMove: {
                     row: 3
                 }
+            },
+            positionOnPlayGround: {
+                positionOnPlayGroundY: 0,
+                positionOnPlayGroundX: 0
             }
         },
         'blue_vampire': {
@@ -78,6 +86,10 @@ export const CONFIG = {
                 rightMove: {
                     row: 7
                 }
+            },
+            positionOnPlayGround: {
+                positionOnPlayGroundY: 0,
+                positionOnPlayGroundX: 0
             }
         },
         'viking': {
@@ -104,6 +116,10 @@ export const CONFIG = {
                 rightMove: {
                     row: 7
                 }
+            },
+            positionOnPlayGround: {
+                positionOnPlayGroundY: 0,
+                positionOnPlayGroundX: 0
             }
         }
     }

@@ -14,9 +14,11 @@ export class SocketService {
 
     public createHero(data: any): void { this.socket.emit('create-hero', data) }
 
-    public addNewHero(): Observable<any> { return this.socket.fromEvent<any>("receive-new-hero").map((hero: any) => hero)}
+    public newHeroWasAdded(): Observable<any> { return this.socket.fromEvent<any>("receive-new-hero").map((heroPlayerData: any) => heroPlayerData)}
 
     public heroAction(data): void { this.socket.emit('hero-action', data) }
 
     public listenToHeroAct(): Observable<any> { return this.socket.fromEvent<any>("hero-acted").map((heroData: any)=> heroData)}
+
+    public saveHeroPlayerData(data: any): void { this.socket.emit('update-hero-data', data) }
 }

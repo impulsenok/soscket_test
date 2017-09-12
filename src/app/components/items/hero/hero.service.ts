@@ -6,53 +6,55 @@ export class HeroService {
 
     constructor(private localStorage: LocalStorageProcessingService) {}
 
-    private heroMovementAnimation(heroElement, heroData): void {
+    private heroMovementAnimation(heroElement, heroPlayerData): void {
 
         let framePosition = 1;
 
-        if (this.localStorage.getHeroFramePosition()) {
-            framePosition = this.localStorage.getHeroFramePosition();
+        if (heroPlayerData.hero.framePosition) {
+
+            framePosition = heroPlayerData.hero.framePosition;
         } else {
-            framePosition = heroData.oneFrameWidth * (heroData.sprite.firstMovementFrameColumn - 1);
-            this.localStorage.saveHeroFramePosition(framePosition);
+            framePosition = heroPlayerData.hero.oneFrameWidth * (heroPlayerData.hero.sprite.firstMovementFrameColumn - 1);
         }
 
-        if (framePosition < (heroData.oneFrameWidth * ((heroData.sprite.firstMovementFrameColumn - 1) + (heroData.movementFrames - 1)))) {
-            framePosition += heroData.oneFrameWidth;
-            this.localStorage.saveHeroFramePosition(framePosition);
+        if (framePosition < (heroPlayerData.hero.oneFrameWidth * ((heroPlayerData.hero.sprite.firstMovementFrameColumn - 1) + (heroPlayerData.hero.movementFrames - 1)))) {
+            framePosition += heroPlayerData.hero.oneFrameWidth;
         } else {
-            framePosition = (heroData.sprite.firstMovementFrameColumn - 1) * heroData.oneFrameWidth;
-            this.localStorage.saveHeroFramePosition(framePosition);
+            framePosition = (heroPlayerData.hero.sprite.firstMovementFrameColumn - 1) * heroPlayerData.hero.oneFrameWidth;
         }
 
-        heroElement.style['background-position-x'] = '-' + framePosition + 'px';
+        heroPlayerData.hero.framePosition = framePosition;
+
+        console.log(`frame position of ${heroPlayerData.user.name}: `, framePosition );
+
+        heroElement.style.backgroundPositionX = `-${framePosition}px`;
     }
 
-    public moveTop(heroElement, heroData): void {
-        this.heroMovementAnimation(heroElement, heroData);
-        heroElement.style.backgroundPositionY = `-${(heroData.sprite.topMove.row - 1) * heroData.oneFrameHeight}px`;
-        heroData.heroPosition.positionOnPlayGroundY -= heroData.stepLength;
-        heroElement.style.top = `${heroData.heroPosition.positionOnPlayGroundY}px`;
+    public moveTop(heroElement, heroPlayerData): void {
+        this.heroMovementAnimation(heroElement, heroPlayerData);
+        heroElement.style.backgroundPositionY = `-${(heroPlayerData.hero.sprite.topMove.row - 1) * heroPlayerData.hero.oneFrameHeight}px`;
+        heroPlayerData.hero.positionOnPlayGround.positionOnPlayGroundY -= heroPlayerData.hero.stepLength;
+        heroElement.style.top = `${heroPlayerData.hero.positionOnPlayGround.positionOnPlayGroundY}px`;
     }
 
-    public moveDown(heroElement, heroData): void {
-        this.heroMovementAnimation(heroElement, heroData);
-        heroElement.style["background-position-y"] = `-${(heroData.sprite.downMove.row - 1) * heroData.oneFrameHeight}px`;
-        heroData.heroPosition.positionOnPlayGroundY += heroData.stepLength;
-        heroElement.style.top = `${heroData.heroPosition.positionOnPlayGroundY}px`;
+    public moveDown(heroElement, heroPlayerData): void {
+        this.heroMovementAnimation(heroElement, heroPlayerData);
+        heroElement.style.backgroundPositionY = `-${(heroPlayerData.hero.sprite.downMove.row - 1) * heroPlayerData.hero.oneFrameHeight}px`;
+        heroPlayerData.hero.positionOnPlayGround.positionOnPlayGroundY += heroPlayerData.hero.stepLength;
+        heroElement.style.top = `${heroPlayerData.hero.positionOnPlayGround.positionOnPlayGroundY}px`;
     }
 
-    public moveLeft(heroElement, heroData): void {
-        this.heroMovementAnimation(heroElement, heroData);
-        heroElement.style.backgroundPositionY = `-${(heroData.sprite.leftMove.row - 1) * heroData.oneFrameHeight}px`;
-        heroData.heroPosition.positionOnPlayGroundX -= heroData.stepLength;
-        heroElement.style.left = `${heroData.heroPosition.positionOnPlayGroundX}px`;
+    public moveLeft(heroElement, heroPlayerData): void {
+        this.heroMovementAnimation(heroElement, heroPlayerData);
+        heroElement.style.backgroundPositionY = `-${(heroPlayerData.hero.sprite.leftMove.row - 1) * heroPlayerData.hero.oneFrameHeight}px`;
+        heroPlayerData.hero.positionOnPlayGround.positionOnPlayGroundX -= heroPlayerData.hero.stepLength;
+        heroElement.style.left = `${heroPlayerData.hero.positionOnPlayGround.positionOnPlayGroundX}px`;
     }
 
-    public moveRight(heroElement, heroData): void {
-        this.heroMovementAnimation(heroElement, heroData);
-        heroElement.style.backgroundPositionY = `-${(heroData.sprite.rightMove.row - 1) * heroData.oneFrameHeight}px`;
-        heroData.heroPosition.positionOnPlayGroundX += heroData.stepLength;
-        heroElement.style.left = `${heroData.heroPosition.positionOnPlayGroundX}px`;
+    public moveRight(heroElement, heroPlayerData): void {
+        this.heroMovementAnimation(heroElement, heroPlayerData);
+        heroElement.style.backgroundPositionY = `-${(heroPlayerData.hero.sprite.rightMove.row - 1) * heroPlayerData.hero.oneFrameHeight}px`;
+        heroPlayerData.hero.positionOnPlayGround.positionOnPlayGroundX += heroPlayerData.hero.stepLength;
+        heroElement.style.left = `${heroPlayerData.hero.positionOnPlayGround.positionOnPlayGroundX}px`;
     }
 }

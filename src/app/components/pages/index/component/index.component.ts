@@ -1,6 +1,6 @@
 import {
     Component, OnInit, ViewChild, ViewContainerRef, ComponentRef,
-    ComponentFactoryResolver, ComponentFactory, HostListener
+    ComponentFactoryResolver, ComponentFactory
 }     from "@angular/core";
 
 import { HeroComponent } from "../../../items/hero/hero.component";
@@ -35,31 +35,35 @@ export class IndexComponent implements OnInit {
                 private localStorage: LocalStorageProcessingService,
                 private keyActionService: KeyPressHandlerService) {}
 
-    private createHero(heroData?: any): void {
+    private createHeroComponent(heroPlayerData?: any): void {
         const factory: ComponentFactory = this.resolver.resolveComponentFactory(HeroComponent);
         this.heroComponentRef = this.container.createComponent(factory);
-        this.heroComponentRef.instance.heroData = heroData.heroData;
-        this.heroComponentRef.instance.userName = heroData.userName;
+        this.heroComponentRef.instance.data = heroPlayerData;
     }
 
     private initHero(): void {
-        this.socketService.createHero({heroData: this.localStorage.getHeroData(), userName: this.localStorage.getNickName()});
+        this.socketService.createHero(this.localStorage.getPlayerData());
     }
 
     private handleAction(data: any): void {
 
-        const heroElement = document.getElementsByClassName(data.hero.className);
+        const heroElement = document.getElementsByClassName(data.heroPlayerData.user.id);
 
-        this.keyActionService.handleAction(data.eventCode, heroElement, data.hero)
+        this.keyActionService.handleAction(data.eventCode, heroElement, data.heroPlayerData)
     }
 
     ngOnInit(): void {
-        // out own hero initialization here
+
+        // TODO: check here all heroes to add all existing
+
+
+        // our own hero initialization here
         this.initHero();
         this.getMessageSUBSCRIBER = this.socketService.getMessage().subscribe(result => { this.allMessages.push(result.message) });
+
         // listen if another one hero will be added(another player connected to our game-room)
-        this.addNewHeroSUBSCRIBER = this.socketService.addNewHero().subscribe(hero => this.createHero(hero));
-        this.heroActSUBSCRIBER = this.socketService.listenToHeroAct().subscribe(data => this.handleAction(data.heroData))
+        this.addNewHeroSUBSCRIBER = this.socketService.newHeroWasAdded().subscribe(heroPlayerData => this.createHeroComponent(heroPlayerData));
+        this.heroActSUBSCRIBER = this.socketService.listenToHeroAct().subscribe(data => this.handleAction(data))
     }
 
     public sendSocketMessage(): void {

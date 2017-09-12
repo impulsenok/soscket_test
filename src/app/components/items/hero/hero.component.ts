@@ -1,6 +1,5 @@
 import {Component, ElementRef, ViewEncapsulation, HostListener, AfterViewInit, OnInit} from "@angular/core";
 
-import { KeyPressHandlerService } from "../../../services/keypress-handler.service";
 import {SocketService} from "../../../services/socket.service";
 import {LocalStorageProcessingService} from "../../../services/local-storage.service";
 
@@ -12,24 +11,19 @@ import {LocalStorageProcessingService} from "../../../services/local-storage.ser
 })
 export class HeroComponent implements AfterViewInit, OnInit {
 
-    private heroData: any = null;
-    private userName: string = null;
+    public data: any = null;
 
-    constructor(private keyActionService: KeyPressHandlerService,
-                private socket: SocketService,
+    constructor(private socket: SocketService,
                 private localStorageService: LocalStorageProcessingService,
                 private heroElement: ElementRef) {}
 
     @HostListener('document:keydown', ['$event']) onKeyUp(ev:KeyboardEvent) {
-        if (this.userName == this.localStorageService.getNickName()) this.socket.heroAction({eventCode: ev.keyCode, hero: this.heroData});
+        if (this.data.user.name == this.localStorageService.getPlayerData().name) this.socket.heroAction({eventCode: ev.keyCode, heroPlayerData: this.data});
     }
 
-    ngOnInit(): void { console.log('this is hero onInit : ', this.heroData, this.userName) }
+    ngOnInit(): void { console.log('this is hero onInit : ', this.data) }
 
     ngAfterViewInit(): void {
-
-        console.log('heroes: ', this.heroElement);
-
-        this.heroElement.nativeElement.childNodes[0].style.background = `url('../images/${this.heroData.img_name}') -${(this.heroData.sprite.firstMovementFrameColumn-1)*this.heroData.oneFrameHeight}px ${(this.heroData.sprite.downMove.row-1)*this.heroData.oneFrameHeight}px`
+        this.heroElement.nativeElement.childNodes[0].style.background = `url('../images/${this.data.hero.img_name}') -${(this.data.hero.sprite.firstMovementFrameColumn-1)*this.data.hero.oneFrameHeight}px ${(this.data.hero.sprite.downMove.row-1)*this.data.hero.oneFrameHeight}px`
     }
 }
