@@ -49,21 +49,21 @@ io.on('connection', (socket) => {
 
     console.log('\n user connected \n');
 
-    io.clients((err, clients) => {
-        console.log('\n\n \n\n', clients, '\n\n\n')
-    });
+    io.clients((err, clients) => { console.log('\n\n \n\n', clients, '\n\n\n') });
 
     socket.on('disconnect', subscriber => console.log('\n User disconnected:  \n', subscriber, '\n\n\n'));
 
-    socket.on('save-message', (data) => {
-        console.log('\n\n\n', data)
-        io.emit('new-message', {user: data.user, message: data.message})
-    });
+    socket.on('save-message', (data) => { io.emit('new-message', {user: data.user, message: data.message}) });
 
     socket.on('create-hero', (playerData) => {
 
-        // broadcast to all subscribers if new hero appeared
-        io.emit('receive-new-hero', {heroes: [heroes[playerData.id]]})
+        if (heroes[playerData.id] && !heroes[playerData.id].emitted) {
+            // broadcast to all subscribers if new hero appeared
+            heroes[playerData.id].emitted = true;
+            io.emit('receive-new-hero', { heroes: [heroes[playerData.id]] })
+        } else {
+            socket.emit('receive-new-hero', { heroes: [heroes[playerData.id]] })
+        }
     });
 
     socket.on('get-all-heroes', (data) => {
