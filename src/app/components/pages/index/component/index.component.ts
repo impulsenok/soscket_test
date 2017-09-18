@@ -8,6 +8,7 @@ import { HeroComponent } from "../../../items/hero/hero.component";
 import { SocketService } from "../../../../services/socket.service";
 import {LocalStorageProcessingService} from "../../../../services/local-storage.service";
 import {KeyPressHandlerService} from "../../../../services/keypress-handler.service";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -30,17 +31,24 @@ export class IndexComponent implements OnInit {
     public chatMessage: string = null;
     public allMessages: Array<string> = [];
 
-    constructor(private socketService: SocketService,
+    constructor(private router: Router,
+                private socketService: SocketService,
                 private resolver: ComponentFactoryResolver,
                 private localStorage: LocalStorageProcessingService,
                 private keyActionService: KeyPressHandlerService) {}
 
-    private createHeroComponent(heroesPlayerData?: Array<any>): void {
-        heroesPlayerData.forEach((heroPlayerData: any) => {
-            const factory: ComponentFactory<Component> = this.resolver.resolveComponentFactory(HeroComponent);
-            this.heroComponentRef = this.container.createComponent(factory);
-            this.heroComponentRef.instance.data = heroPlayerData;
-        });
+    private createHeroComponent(heroesPlayerData: Array<any>): void {
+
+        if (heroesPlayerData && heroesPlayerData.length > 0) {
+            heroesPlayerData.forEach((heroPlayerData: any) => {
+                const factory: ComponentFactory<Component> = this.resolver.resolveComponentFactory(HeroComponent);
+                this.heroComponentRef = this.container.createComponent(factory);
+                this.heroComponentRef.instance.data = heroPlayerData;
+            });
+        } else {
+
+            this.router.navigate(['settings']);
+        }
     }
 
     private initHero(): void {
@@ -51,9 +59,7 @@ export class IndexComponent implements OnInit {
     }
 
     private handleAction(data: any): void {
-
         const heroElement = document.getElementsByClassName(data.heroPlayerData.user.id);
-
         this.keyActionService.handleAction(data.eventCode, heroElement, data.heroPlayerData)
     }
 

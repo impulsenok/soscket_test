@@ -1,3 +1,56 @@
+
+let checkIfHeroKillAnotherOne = (enemy, hero) => {
+
+    let enemyTop = {
+        left: {
+            X: enemy.positionOnPlayGround.positionOnPlayGroundX,
+            Y: enemy.positionOnPlayGround.positionOnPlayGroundY
+        },
+        right: {
+            X: enemy.positionOnPlayGround.positionOnPlayGroundX + enemy.oneFrameWidth,
+            Y: enemy.positionOnPlayGround.positionOnPlayGroundY
+        }
+    };
+
+    let enemyBottom = {
+       left: {
+           X: enemy.positionOnPlayGround.positionOnPlayGroundX,
+           Y: enemy.positionOnPlayGround.positionOnPlayGroundY + enemy.oneFrameHeight
+       },
+       right: {
+           X: enemy.positionOnPlayGround.positionOnPlayGroundX + enemy.oneFrameWidth,
+           Y: enemy.positionOnPlayGround.positionOnPlayGroundY + enemy.oneFrameHeight
+       }
+    };
+
+    let heroTop = {
+        left: {
+            X: hero.positionOnPlayGround.positionOnPlayGroundX,
+            Y: hero.positionOnPlayGround.positionOnPlayGroundY
+        },
+        right: {
+            X: hero.positionOnPlayGround.positionOnPlayGroundX + hero.oneFrameWidth,
+            Y: hero.positionOnPlayGround.positionOnPlayGroundY
+        }
+    };
+
+    let heroBottom = {
+        left: {
+            X: hero.positionOnPlayGround.positionOnPlayGroundX,
+            Y: hero.positionOnPlayGround.positionOnPlayGroundY + hero.oneFrameHeight
+        },
+        right: {
+            X: hero.positionOnPlayGround.positionOnPlayGroundX + hero.oneFrameWidth,
+            Y: hero.positionOnPlayGround.positionOnPlayGroundY + hero.oneFrameHeight
+        }
+    };
+
+    if ( ((heroTop.left.Y <= enemyBottom.left.Y && heroTop.left.Y >= enemyTop.left.Y) ||
+          (heroBottom.left.Y <= enemyBottom.left.Y && heroBottom.left.Y >= enemyTop.left.Y)) &&
+         ((heroTop.left.X >= enemyBottom.left.X && heroTop.left.X <= enemyBottom.right.X) ||
+          (heroTop.right.X >= enemyBottom.left.X && heroTop.left.X <= enemyBottom.right.X)) ) return true;
+};
+
 module.exports = (server) => {
 
     const io = require("socket.io")(server);
@@ -23,7 +76,8 @@ module.exports = (server) => {
                 io.emit('receive-new-hero', { heroes: [heroes[playerData.id]] });
                 // we should broadcast it only for current player(who refresh the page, for example)
             } else {
-                socket.emit('receive-new-hero', { heroes: [heroes[playerData.id]] });
+                // in case we've restarted our server, all heroes dta will be lost.
+                socket.emit('receive-new-hero', { heroes: heroes[playerData.id] ? [heroes[playerData.id]] : undefined });
             }
         });
 
@@ -35,25 +89,44 @@ module.exports = (server) => {
             allHeroesKeys.forEach(key => { if (heroes[key].user.id != data.id) result.push(heroes[key]) });
 
             // emit to current socket(current subscriber) only
-            socket.emit('receive-new-hero', {heroes: result})
+            if (result.length > 0) socket.emit('receive-new-hero', {heroes: result});
         });
 
         socket.on('hero-action', (data) => {
 
             let heroPlayerData = heroes[data.heroPlayerData.user.id];
 
-            io.emit('hero-acted', {eventCode: data.eventCode, heroPlayerData})
+            io.emit('hero-acted', {eventCode: data.eventCode, heroPlayerData});
         });
 
         socket.on('hero-beat', (data) => {
 
-            console.log('\n\n herod beat data>>> ', JSON.stringify(data, null, 4));
+            Object.keys(heroes).forEach(key => {
+
+                if (data.hero.positionOnPlayGround.movementDirection && heroes[key].user.id != data.user.id) {
+
+                    switch (data.hero.positionOnPlayGround.movementDirection) {
+
+                        case "TOP": checkIfHeroKillAnotherOne(heroes[key].hero, data.hero) ? console.log(`${data.user.name}  killed ${heroes[key].user.name}\n`) : '';
+                            break;
+
+                        case "DOWN": checkIfHeroKillAnotherOne(heroes[key].hero, data.hero) ? console.log(`${data.user.name}  killed ${heroes[key].user.name}\n`) : '';
+                            break;
+
+                        case "LEFT": checkIfHeroKillAnotherOne(heroes[key].hero, data.hero) ? console.log(`${data.user.name}  killed ${heroes[key].user.name}\n`) : '';
+                            break;
+
+                        case "RIGHT": checkIfHeroKillAnotherOne(heroes[key].hero, data.hero) ? console.log(`${data.user.name}  killed ${heroes[key].user.name}\n`) : '';
+                            break;
+
+                        default: console.log('Unknown movement direction detected!')
+                    }
+                }
+            });
+
         });
 
-        socket.on('update-hero-data', data => {
-            console.log('\n\n\n ipdate hero data here: ', JSON.stringify(data, null, 4));
-            heroes[data.user.id] = data
-        });
+        socket.on('update-hero-data', data => { heroes[data.user.id] = data });
     });
 
     return (req, res, next) =>  next();

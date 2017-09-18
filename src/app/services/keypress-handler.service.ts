@@ -39,7 +39,7 @@ export class KeyPressHandlerService {
                 break;
 
             // SPACE
-            case 32: { this.socket.heroBeatAction(heroPlayerData); console.log('space clicked here'); }
+            case 32: { this.socket.heroBeatAction(heroPlayerData) }
                 break;
 
             default: /*console.log("unhandled key was pressed")*/;
