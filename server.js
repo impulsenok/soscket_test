@@ -24,8 +24,6 @@ const app = express();
 
 const server         = require('http').Server(app);
 
-const io             = require("socket.io")(server);
-
 app.use(userAgent.express());
 
 // ACCESS logging: redirect default express morgan to mainStream Logs method to write log to 'logs.access' log.
@@ -42,50 +40,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-let heroes = {};
-
-io.on('connection', (socket) => {
-
-    console.log('\n user connected \n');
-
-    io.clients((err, clients) => { console.log('\n\n \n\n', clients, '\n\n\n') });
-
-    socket.on('disconnect', subscriber => console.log('\n User disconnected:  \n', subscriber, '\n\n\n'));
-
-    socket.on('save-message', (data) => { io.emit('new-message', {user: data.user, message: data.message}) });
-
-    socket.on('create-hero', (playerData) => {
-
-        if (heroes[playerData.id] && !heroes[playerData.id].emitted) {
-            // broadcast to all subscribers if new hero appeared
-            heroes[playerData.id].emitted = true;
-            io.emit('receive-new-hero', { heroes: [heroes[playerData.id]] })
-        } else {
-            socket.emit('receive-new-hero', { heroes: [heroes[playerData.id]] })
-        }
-    });
-
-    socket.on('get-all-heroes', (data) => {
-
-        let allHeroesKeys = Object.keys(heroes);
-        let result = [];
-
-        allHeroesKeys.forEach(key => { if (heroes[key].user.id != data.id) result.push(heroes[key]) });
-
-        // emit to current socket(current subscriber) only
-        socket.emit('receive-new-hero', {heroes: result})
-    });
-
-    socket.on('hero-action', (data) => {
-
-        let heroPlayerData = heroes[data.heroPlayerData.user.id];
-
-        io.emit('hero-acted', {eventCode: data.eventCode, heroPlayerData})
-    });
-
-    socket.on('update-hero-data', data => heroes[data.user.id] = data);
-});
+app.use(require('server/lib/io_processing')(server));
 
 
 app.use('/', require('server/routes/index'));

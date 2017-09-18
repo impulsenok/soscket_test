@@ -326,3 +326,413 @@
 
 2017-09-15 11:23:56 +03:00 - info: [2017-09-15 11:23:56 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /images/good_enemies_2.png HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
 
+2017-09-15 11:32:20 +03:00 - info: [2017-09-15 11:32:20 +03:00]: <unknown ip> - (::1) "GET /fun HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:32:20 +03:00 - info: [2017-09-15 11:32:20 +03:00]: <unknown ip> - (::1) "GET /styles/bootstrap.min.css HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:32:20 +03:00 - info: [2017-09-15 11:32:20 +03:00]: <unknown ip> - (::1) "GET /polyfills.js HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:32:20 +03:00 - info: [2017-09-15 11:32:20 +03:00]: <unknown ip> - (::1) "GET /vendor.js HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:32:20 +03:00 - info: [2017-09-15 11:32:20 +03:00]: <unknown ip> - (::1) "GET /app.js HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:32:22 +03:00 - info: [2017-09-15 11:32:22 +03:00]: <unknown ip> - (::1) "GET /assets/styles/css/fonts.css HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:32:22 +03:00 - info: [2017-09-15 11:32:22 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:32:22 +03:00 - info: [2017-09-15 11:32:22 +03:00]: <unknown ip> - (::1) "GET /images/background_2.jpg HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:32:23 +03:00 - info: [2017-09-15 11:32:23 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:32:23 +03:00 - info: [2017-09-15 11:32:23 +03:00]: <unknown ip> - (::1) "GET /images/good_enemies_2.png HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:01 +03:00 - info: [2017-09-15 11:33:01 +03:00]: <unknown ip> - (::1) "GET /fun HTTP/1.1" 200 589 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:01 +03:00 - info: [2017-09-15 11:33:01 +03:00]: <unknown ip> - (::1) "GET /styles/bootstrap.min.css HTTP/1.1" 200 122413 "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:01 +03:00 - info: [2017-09-15 11:33:01 +03:00]: <unknown ip> - (::1) "GET /polyfills.js HTTP/1.1" 200 909123 "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:01 +03:00 - info: [2017-09-15 11:33:01 +03:00]: <unknown ip> - (::1) "GET /app.js HTTP/1.1" 200 1342658 "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:01 +03:00 - info: [2017-09-15 11:33:01 +03:00]: <unknown ip> - (::1) "GET /vendor.js HTTP/1.1" 200 8421082 "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:03 +03:00 - info: [2017-09-15 11:33:03 +03:00]: <unknown ip> - (::1) "GET /assets/styles/css/fonts.css HTTP/1.1" 200 589 "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:03 +03:00 - info: [2017-09-15 11:33:03 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 200 589 "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:03 +03:00 - info: [2017-09-15 11:33:03 +03:00]: <unknown ip> - (::1) "GET /images/background_2.jpg HTTP/1.1" 200 102519 "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:03 +03:00 - info: [2017-09-15 11:33:03 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:03 +03:00 - info: [2017-09-15 11:33:03 +03:00]: <unknown ip> - (::1) "GET /images/good_enemies_2.png HTTP/1.1" 200 59524 "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:10 +03:00 - info: [2017-09-15 11:33:10 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:10 +03:00 - info: [2017-09-15 11:33:10 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:11 +03:00 - info: [2017-09-15 11:33:11 +03:00]: <unknown ip> - (::1) "GET /settings HTTP/1.1" 200 589 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:11 +03:00 - info: [2017-09-15 11:33:11 +03:00]: <unknown ip> - (::1) "GET /styles/bootstrap.min.css HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:11 +03:00 - info: [2017-09-15 11:33:11 +03:00]: <unknown ip> - (::1) "GET /polyfills.js HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:11 +03:00 - info: [2017-09-15 11:33:11 +03:00]: <unknown ip> - (::1) "GET /vendor.js HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:11 +03:00 - info: [2017-09-15 11:33:11 +03:00]: <unknown ip> - (::1) "GET /app.js HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:12 +03:00 - info: [2017-09-15 11:33:12 +03:00]: <unknown ip> - (::1) "GET /assets/styles/css/fonts.css HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:12 +03:00 - info: [2017-09-15 11:33:12 +03:00]: <unknown ip> - (::1) "GET /images/good_enemies_2.png HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:12 +03:00 - info: [2017-09-15 11:33:12 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:12 +03:00 - info: [2017-09-15 11:33:12 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:14 +03:00 - info: [2017-09-15 11:33:14 +03:00]: <unknown ip> - (::1) "GET /images/background_2.jpg HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:14 +03:00 - info: [2017-09-15 11:33:14 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:32 +03:00 - info: [2017-09-15 11:33:32 +03:00]: <unknown ip> - (::1) "GET /fun HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:32 +03:00 - info: [2017-09-15 11:33:32 +03:00]: <unknown ip> - (::1) "GET /styles/bootstrap.min.css HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:32 +03:00 - info: [2017-09-15 11:33:32 +03:00]: <unknown ip> - (::1) "GET /polyfills.js HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:32 +03:00 - info: [2017-09-15 11:33:32 +03:00]: <unknown ip> - (::1) "GET /vendor.js HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:32 +03:00 - info: [2017-09-15 11:33:32 +03:00]: <unknown ip> - (::1) "GET /app.js HTTP/1.1" 200 1342658 "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:33 +03:00 - info: [2017-09-15 11:33:33 +03:00]: <unknown ip> - (::1) "GET /assets/styles/css/fonts.css HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:33 +03:00 - info: [2017-09-15 11:33:33 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:34 +03:00 - info: [2017-09-15 11:33:34 +03:00]: <unknown ip> - (::1) "GET /images/background_2.jpg HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:34 +03:00 - info: [2017-09-15 11:33:34 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:33:34 +03:00 - info: [2017-09-15 11:33:34 +03:00]: <unknown ip> - (::1) "GET /images/good_enemies_2.png HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:34:01 +03:00 - info: [2017-09-15 11:34:01 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:34:06 +03:00 - info: [2017-09-15 11:34:06 +03:00]: <unknown ip> - (::1) "GET /settings HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:34:06 +03:00 - info: [2017-09-15 11:34:06 +03:00]: <unknown ip> - (::1) "GET /styles/bootstrap.min.css HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:34:06 +03:00 - info: [2017-09-15 11:34:06 +03:00]: <unknown ip> - (::1) "GET /polyfills.js HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:34:06 +03:00 - info: [2017-09-15 11:34:06 +03:00]: <unknown ip> - (::1) "GET /vendor.js HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:34:06 +03:00 - info: [2017-09-15 11:34:06 +03:00]: <unknown ip> - (::1) "GET /app.js HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:34:08 +03:00 - info: [2017-09-15 11:34:08 +03:00]: <unknown ip> - (::1) "GET /assets/styles/css/fonts.css HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:34:08 +03:00 - info: [2017-09-15 11:34:08 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:34:08 +03:00 - info: [2017-09-15 11:34:08 +03:00]: <unknown ip> - (::1) "GET /images/good_enemies_2.png HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:34:09 +03:00 - info: [2017-09-15 11:34:09 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:34:11 +03:00 - info: [2017-09-15 11:34:11 +03:00]: <unknown ip> - (::1) "GET /images/background_2.jpg HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:34:11 +03:00 - info: [2017-09-15 11:34:11 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:35:19 +03:00 - info: [2017-09-15 11:35:19 +03:00]: <unknown ip> - (::1) "GET /fun HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:35:19 +03:00 - info: [2017-09-15 11:35:19 +03:00]: <unknown ip> - (::1) "GET /styles/bootstrap.min.css HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:35:19 +03:00 - info: [2017-09-15 11:35:19 +03:00]: <unknown ip> - (::1) "GET /polyfills.js HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:35:19 +03:00 - info: [2017-09-15 11:35:19 +03:00]: <unknown ip> - (::1) "GET /vendor.js HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:35:19 +03:00 - info: [2017-09-15 11:35:19 +03:00]: <unknown ip> - (::1) "GET /app.js HTTP/1.1" 200 1342975 "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:35:20 +03:00 - info: [2017-09-15 11:35:20 +03:00]: <unknown ip> - (::1) "GET /assets/styles/css/fonts.css HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:35:20 +03:00 - info: [2017-09-15 11:35:20 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:35:20 +03:00 - info: [2017-09-15 11:35:20 +03:00]: <unknown ip> - (::1) "GET /images/background_2.jpg HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:35:20 +03:00 - info: [2017-09-15 11:35:20 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:35:20 +03:00 - info: [2017-09-15 11:35:20 +03:00]: <unknown ip> - (::1) "GET /images/good_enemies_2.png HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:03 +03:00 - info: [2017-09-15 11:36:03 +03:00]: <unknown ip> - (::1) "GET /fun HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:03 +03:00 - info: [2017-09-15 11:36:03 +03:00]: <unknown ip> - (::1) "GET /styles/bootstrap.min.css HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:03 +03:00 - info: [2017-09-15 11:36:03 +03:00]: <unknown ip> - (::1) "GET /polyfills.js HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:03 +03:00 - info: [2017-09-15 11:36:03 +03:00]: <unknown ip> - (::1) "GET /vendor.js HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:03 +03:00 - info: [2017-09-15 11:36:03 +03:00]: <unknown ip> - (::1) "GET /app.js HTTP/1.1" 200 1343029 "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:04 +03:00 - info: [2017-09-15 11:36:04 +03:00]: <unknown ip> - (::1) "GET /assets/styles/css/fonts.css HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:04 +03:00 - info: [2017-09-15 11:36:04 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:04 +03:00 - info: [2017-09-15 11:36:04 +03:00]: <unknown ip> - (::1) "GET /images/background_2.jpg HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:04 +03:00 - info: [2017-09-15 11:36:04 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:04 +03:00 - info: [2017-09-15 11:36:04 +03:00]: <unknown ip> - (::1) "GET /images/good_enemies_2.png HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:27 +03:00 - info: [2017-09-15 11:36:27 +03:00]: <unknown ip> - (::1) "GET /fun HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:27 +03:00 - info: [2017-09-15 11:36:27 +03:00]: <unknown ip> - (::1) "GET /styles/bootstrap.min.css HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:27 +03:00 - info: [2017-09-15 11:36:27 +03:00]: <unknown ip> - (::1) "GET /polyfills.js HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:27 +03:00 - info: [2017-09-15 11:36:27 +03:00]: <unknown ip> - (::1) "GET /vendor.js HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:28 +03:00 - info: [2017-09-15 11:36:28 +03:00]: <unknown ip> - (::1) "GET /app.js HTTP/1.1" 200 1343029 "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:29 +03:00 - info: [2017-09-15 11:36:29 +03:00]: <unknown ip> - (::1) "GET /assets/styles/css/fonts.css HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:29 +03:00 - info: [2017-09-15 11:36:29 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:29 +03:00 - info: [2017-09-15 11:36:29 +03:00]: <unknown ip> - (::1) "GET /images/background_2.jpg HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:29 +03:00 - info: [2017-09-15 11:36:29 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:29 +03:00 - info: [2017-09-15 11:36:29 +03:00]: <unknown ip> - (::1) "GET /images/good_enemies_2.png HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:38 +03:00 - info: [2017-09-15 11:36:38 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:38 +03:00 - info: [2017-09-15 11:36:38 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:41 +03:00 - info: [2017-09-15 11:36:41 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:36:58 +03:00 - info: [2017-09-15 11:36:58 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /settings HTTP/1.1" 200 589 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:36:58 +03:00 - info: [2017-09-15 11:36:58 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /styles/bootstrap.min.css HTTP/1.1" 200 122413 "http://localhost:8609/settings" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:36:58 +03:00 - info: [2017-09-15 11:36:58 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /polyfills.js HTTP/1.1" 200 909123 "http://localhost:8609/settings" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:36:58 +03:00 - info: [2017-09-15 11:36:58 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /app.js HTTP/1.1" 200 1343029 "http://localhost:8609/settings" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:36:58 +03:00 - info: [2017-09-15 11:36:58 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /vendor.js HTTP/1.1" 200 8421082 "http://localhost:8609/settings" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:36:59 +03:00 - info: [2017-09-15 11:36:59 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /assets/styles/css/fonts.css HTTP/1.1" 200 589 "http://localhost:8609/settings" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:36:59 +03:00 - info: [2017-09-15 11:36:59 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /images/good_enemies_2.png HTTP/1.1" 200 59524 "http://localhost:8609/settings" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:37:01 +03:00 - info: [2017-09-15 11:37:01 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /images/background_2.jpg HTTP/1.1" 200 102519 "http://localhost:8609/fun" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:37:57 +03:00 - info: [2017-09-15 11:37:57 +03:00]: <unknown ip> - (::1) "GET /fun HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:37:57 +03:00 - info: [2017-09-15 11:37:57 +03:00]: <unknown ip> - (::1) "GET /styles/bootstrap.min.css HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:37:57 +03:00 - info: [2017-09-15 11:37:57 +03:00]: <unknown ip> - (::1) "GET /polyfills.js HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:37:57 +03:00 - info: [2017-09-15 11:37:57 +03:00]: <unknown ip> - (::1) "GET /vendor.js HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:37:57 +03:00 - info: [2017-09-15 11:37:57 +03:00]: <unknown ip> - (::1) "GET /app.js HTTP/1.1" 200 1343065 "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:37:58 +03:00 - info: [2017-09-15 11:37:58 +03:00]: <unknown ip> - (::1) "GET /assets/styles/css/fonts.css HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:37:58 +03:00 - info: [2017-09-15 11:37:58 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:37:58 +03:00 - info: [2017-09-15 11:37:58 +03:00]: <unknown ip> - (::1) "GET /images/background_2.jpg HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:37:58 +03:00 - info: [2017-09-15 11:37:58 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:37:58 +03:00 - info: [2017-09-15 11:37:58 +03:00]: <unknown ip> - (::1) "GET /images/good_enemies_2.png HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:39:05 +03:00 - info: [2017-09-15 11:39:05 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /fun HTTP/1.1" 200 589 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:39:05 +03:00 - info: [2017-09-15 11:39:05 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /styles/bootstrap.min.css HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:39:05 +03:00 - info: [2017-09-15 11:39:05 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /polyfills.js HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:39:05 +03:00 - info: [2017-09-15 11:39:05 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /vendor.js HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:39:05 +03:00 - info: [2017-09-15 11:39:05 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /app.js HTTP/1.1" 200 1343065 "http://localhost:8609/fun" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:39:05 +03:00 - info: [2017-09-15 11:39:05 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /assets/styles/css/fonts.css HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:39:06 +03:00 - info: [2017-09-15 11:39:06 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /images/background_2.jpg HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:39:06 +03:00 - info: [2017-09-15 11:39:06 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /images/good_enemies_2.png HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:42:16 +03:00 - info: [2017-09-15 11:42:16 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:42:16 +03:00 - info: [2017-09-15 11:42:16 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:42:17 +03:00 - info: [2017-09-15 11:42:17 +03:00]: <unknown ip> - (::1) "GET /settings HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:42:17 +03:00 - info: [2017-09-15 11:42:17 +03:00]: <unknown ip> - (::1) "GET /styles/bootstrap.min.css HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:42:17 +03:00 - info: [2017-09-15 11:42:17 +03:00]: <unknown ip> - (::1) "GET /polyfills.js HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:42:17 +03:00 - info: [2017-09-15 11:42:17 +03:00]: <unknown ip> - (::1) "GET /vendor.js HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:42:17 +03:00 - info: [2017-09-15 11:42:17 +03:00]: <unknown ip> - (::1) "GET /app.js HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:42:18 +03:00 - info: [2017-09-15 11:42:18 +03:00]: <unknown ip> - (::1) "GET /assets/styles/css/fonts.css HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:42:18 +03:00 - info: [2017-09-15 11:42:18 +03:00]: <unknown ip> - (::1) "GET /images/good_enemies_2.png HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:42:18 +03:00 - info: [2017-09-15 11:42:18 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:42:18 +03:00 - info: [2017-09-15 11:42:18 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:42:45 +03:00 - info: [2017-09-15 11:42:45 +03:00]: <unknown ip> - (::1) "GET /images/background_2.jpg HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:42:45 +03:00 - info: [2017-09-15 11:42:45 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-15 11:43:58 +03:00 - info: [2017-09-15 11:43:58 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /settings HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:43:58 +03:00 - info: [2017-09-15 11:43:58 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /styles/bootstrap.min.css HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:43:58 +03:00 - info: [2017-09-15 11:43:58 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /polyfills.js HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:43:58 +03:00 - info: [2017-09-15 11:43:58 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /vendor.js HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:43:58 +03:00 - info: [2017-09-15 11:43:58 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /app.js HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:43:59 +03:00 - info: [2017-09-15 11:43:59 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /assets/styles/css/fonts.css HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:43:59 +03:00 - info: [2017-09-15 11:43:59 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /images/good_enemies_2.png HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-15 11:44:04 +03:00 - info: [2017-09-15 11:44:04 +03:00]: <unknown ip> - (::ffff:127.0.0.1) "GET /images/background_2.jpg HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0"
+
+2017-09-18 10:36:33 +03:00 - info: [2017-09-18 10:36:33 +03:00]: <unknown ip> - (::1) "GET /fun HTTP/1.1" 200 589 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 10:36:33 +03:00 - info: [2017-09-18 10:36:33 +03:00]: <unknown ip> - (::1) "GET /robots.txt HTTP/1.1" 200 589 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 10:36:33 +03:00 - info: [2017-09-18 10:36:33 +03:00]: <unknown ip> - (::1) "GET /styles/bootstrap.min.css HTTP/1.1" 200 122413 "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 10:36:33 +03:00 - info: [2017-09-18 10:36:33 +03:00]: <unknown ip> - (::1) "GET /polyfills.js HTTP/1.1" 200 909123 "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 10:36:33 +03:00 - info: [2017-09-18 10:36:33 +03:00]: <unknown ip> - (::1) "GET /app.js HTTP/1.1" 200 1343829 "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 10:36:33 +03:00 - info: [2017-09-18 10:36:33 +03:00]: <unknown ip> - (::1) "GET /vendor.js HTTP/1.1" 200 8421082 "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 10:36:34 +03:00 - info: [2017-09-18 10:36:34 +03:00]: <unknown ip> - (::1) "GET /assets/styles/css/fonts.css HTTP/1.1" 200 589 "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 10:36:35 +03:00 - info: [2017-09-18 10:36:35 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 200 589 "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 10:36:35 +03:00 - info: [2017-09-18 10:36:35 +03:00]: <unknown ip> - (::1) "GET /images/background_2.jpg HTTP/1.1" 200 102519 "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 10:36:35 +03:00 - info: [2017-09-18 10:36:35 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 10:36:38 +03:00 - info: [2017-09-18 10:36:38 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 10:36:38 +03:00 - info: [2017-09-18 10:36:38 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 10:36:38 +03:00 - info: [2017-09-18 10:36:38 +03:00]: <unknown ip> - (::1) "GET /images/good_enemies_2.png HTTP/1.1" 200 59524 "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 10:36:40 +03:00 - info: [2017-09-18 10:36:40 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:24 +03:00 - info: [2017-09-18 11:09:24 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 200 589 "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:24 +03:00 - info: [2017-09-18 11:09:24 +03:00]: <unknown ip> - (::1) "GET /images/good_enemies_2.png HTTP/1.1" 200 59524 "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:24 +03:00 - info: [2017-09-18 11:09:24 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:26 +03:00 - info: [2017-09-18 11:09:26 +03:00]: <unknown ip> - (::1) "GET /settings HTTP/1.1" 200 589 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:26 +03:00 - info: [2017-09-18 11:09:26 +03:00]: <unknown ip> - (::1) "GET /robots.txt HTTP/1.1" 200 589 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:26 +03:00 - info: [2017-09-18 11:09:26 +03:00]: <unknown ip> - (::1) "GET /styles/bootstrap.min.css HTTP/1.1" 200 122413 "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:26 +03:00 - info: [2017-09-18 11:09:26 +03:00]: <unknown ip> - (::1) "GET /polyfills.js HTTP/1.1" 200 909123 "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:26 +03:00 - info: [2017-09-18 11:09:26 +03:00]: <unknown ip> - (::1) "GET /app.js HTTP/1.1" 200 1343887 "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:26 +03:00 - info: [2017-09-18 11:09:26 +03:00]: <unknown ip> - (::1) "GET /vendor.js HTTP/1.1" 200 8421082 "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:27 +03:00 - info: [2017-09-18 11:09:27 +03:00]: <unknown ip> - (::1) "GET /assets/styles/css/fonts.css HTTP/1.1" 200 589 "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:28 +03:00 - info: [2017-09-18 11:09:28 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:28 +03:00 - info: [2017-09-18 11:09:28 +03:00]: <unknown ip> - (::1) "GET /images/good_enemies_2.png HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:28 +03:00 - info: [2017-09-18 11:09:28 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:30 +03:00 - info: [2017-09-18 11:09:30 +03:00]: <unknown ip> - (::1) "GET /images/background_2.jpg HTTP/1.1" 200 102519 "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:30 +03:00 - info: [2017-09-18 11:09:30 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:52 +03:00 - info: [2017-09-18 11:09:52 +03:00]: <unknown ip> - (::1) "GET /fun HTTP/1.1" 200 589 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:53 +03:00 - info: [2017-09-18 11:09:53 +03:00]: <unknown ip> - (::1) "GET /styles/bootstrap.min.css HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:53 +03:00 - info: [2017-09-18 11:09:53 +03:00]: <unknown ip> - (::1) "GET /polyfills.js HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:53 +03:00 - info: [2017-09-18 11:09:53 +03:00]: <unknown ip> - (::1) "GET /vendor.js HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:53 +03:00 - info: [2017-09-18 11:09:53 +03:00]: <unknown ip> - (::1) "GET /app.js HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:54 +03:00 - info: [2017-09-18 11:09:54 +03:00]: <unknown ip> - (::1) "GET /assets/styles/css/fonts.css HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:55 +03:00 - info: [2017-09-18 11:09:55 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:55 +03:00 - info: [2017-09-18 11:09:55 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:55 +03:00 - info: [2017-09-18 11:09:55 +03:00]: <unknown ip> - (::1) "GET /images/background_2.jpg HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:58 +03:00 - info: [2017-09-18 11:09:58 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:58 +03:00 - info: [2017-09-18 11:09:58 +03:00]: <unknown ip> - (::1) "GET /images/good_enemies_2.png HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:09:58 +03:00 - info: [2017-09-18 11:09:58 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:10:00 +03:00 - info: [2017-09-18 11:10:00 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:15:47 +03:00 - info: [2017-09-18 11:15:47 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:15:47 +03:00 - info: [2017-09-18 11:15:47 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:15:49 +03:00 - info: [2017-09-18 11:15:49 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:48:57 +03:00 - info: [2017-09-18 11:48:57 +03:00]: <unknown ip> - (::1) "GET /images/good_enemies_2.png HTTP/1.1" 200 59524 "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:48:57 +03:00 - info: [2017-09-18 11:48:57 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 200 589 "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:48:58 +03:00 - info: [2017-09-18 11:48:58 +03:00]: <unknown ip> - (::1) "GET /settings HTTP/1.1" 200 589 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:48:58 +03:00 - info: [2017-09-18 11:48:58 +03:00]: <unknown ip> - (::1) "GET /styles/bootstrap.min.css HTTP/1.1" 200 122413 "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:48:58 +03:00 - info: [2017-09-18 11:48:58 +03:00]: <unknown ip> - (::1) "GET /polyfills.js HTTP/1.1" 200 909123 "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:48:58 +03:00 - info: [2017-09-18 11:48:58 +03:00]: <unknown ip> - (::1) "GET /app.js HTTP/1.1" 200 1344246 "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:48:59 +03:00 - info: [2017-09-18 11:48:59 +03:00]: <unknown ip> - (::1) "GET /vendor.js HTTP/1.1" 200 8421082 "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:48:59 +03:00 - info: [2017-09-18 11:48:59 +03:00]: <unknown ip> - (::1) "GET /assets/styles/css/fonts.css HTTP/1.1" 200 589 "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:49:00 +03:00 - info: [2017-09-18 11:49:00 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:49:00 +03:00 - info: [2017-09-18 11:49:00 +03:00]: <unknown ip> - (::1) "GET /images/good_enemies_2.png HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:49:00 +03:00 - info: [2017-09-18 11:49:00 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:49:56 +03:00 - info: [2017-09-18 11:49:56 +03:00]: <unknown ip> - (::1) "GET /images/good_enemies_2.png HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:49:56 +03:00 - info: [2017-09-18 11:49:56 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:49:56 +03:00 - info: [2017-09-18 11:49:56 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:49:56 +03:00 - info: [2017-09-18 11:49:56 +03:00]: <unknown ip> - (::1) "GET /settings HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:49:56 +03:00 - info: [2017-09-18 11:49:56 +03:00]: <unknown ip> - (::1) "GET /styles/bootstrap.min.css HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:49:56 +03:00 - info: [2017-09-18 11:49:56 +03:00]: <unknown ip> - (::1) "GET /polyfills.js HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:49:56 +03:00 - info: [2017-09-18 11:49:56 +03:00]: <unknown ip> - (::1) "GET /vendor.js HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:49:56 +03:00 - info: [2017-09-18 11:49:56 +03:00]: <unknown ip> - (::1) "GET /app.js HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:49:57 +03:00 - info: [2017-09-18 11:49:57 +03:00]: <unknown ip> - (::1) "GET /assets/styles/css/fonts.css HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:49:57 +03:00 - info: [2017-09-18 11:49:57 +03:00]: <unknown ip> - (::1) "GET /images/good_enemies_2.png HTTP/1.1" 304 - "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:49:57 +03:00 - info: [2017-09-18 11:49:57 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:49:57 +03:00 - info: [2017-09-18 11:49:57 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/settings" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:49:59 +03:00 - info: [2017-09-18 11:49:59 +03:00]: <unknown ip> - (::1) "GET /images/background_2.jpg HTTP/1.1" 200 102519 "http://localhost:8609/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
+2017-09-18 11:49:59 +03:00 - info: [2017-09-18 11:49:59 +03:00]: <unknown ip> - (::1) "GET /images/favicon/favicon.ico HTTP/1.1" 304 - "http://localhost:8609/fun" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36"
+
