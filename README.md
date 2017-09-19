@@ -1,6 +1,8 @@
 # soscket_test
 socket training here
 
+checkout to multiplayer_game branch;
+
 1) npm install;
 2) set your ip in app.config.ts; 
 3) npm run build;
