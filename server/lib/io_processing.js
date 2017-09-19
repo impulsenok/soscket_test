@@ -49,6 +49,8 @@ let checkIfHeroKillAnotherOne = (enemy, hero) => {
           (heroBottom.left.Y <= enemyBottom.left.Y && heroBottom.left.Y >= enemyTop.left.Y)) &&
          ((heroTop.left.X >= enemyBottom.left.X && heroTop.left.X <= enemyBottom.right.X) ||
           (heroTop.right.X >= enemyBottom.left.X && heroTop.left.X <= enemyBottom.right.X)) ) return true;
+
+    return false;
 };
 
 module.exports = (server) => {
@@ -56,6 +58,7 @@ module.exports = (server) => {
     const io = require("socket.io")(server);
 
     let heroes = {};
+    let scores = [];
 
     io.on('connection', (socket) => {
 
@@ -74,9 +77,11 @@ module.exports = (server) => {
                 // broadcast to all subscribers if new hero appeared
                 heroes[playerData.id].emitted = true;
                 io.emit('receive-new-hero', { heroes: [heroes[playerData.id]] });
+                scores.push({id: playerData.id, playerName: playerData.name, value: 0});
                 // we should broadcast it only for current player(who refresh the page, for example)
             } else {
-                // in case we've restarted our server, all heroes dta will be lost.
+                // in case we've restarted our server, all heroes data will be lost.
+                socket.emit('scores-updated', scores);
                 socket.emit('receive-new-hero', { heroes: heroes[playerData.id] ? [heroes[playerData.id]] : undefined });
             }
         });
@@ -103,23 +108,19 @@ module.exports = (server) => {
 
             Object.keys(heroes).forEach(key => {
 
-                if (data.hero.positionOnPlayGround.movementDirection && heroes[key].user.id != data.user.id) {
+                if (heroes[key].user.id != data.user.id) {
 
-                    switch (data.hero.positionOnPlayGround.movementDirection) {
+                    if (checkIfHeroKillAnotherOne(heroes[key].hero, data.hero)) {
 
-                        case "TOP": checkIfHeroKillAnotherOne(heroes[key].hero, data.hero) ? console.log(`${data.user.name}  killed ${heroes[key].user.name}\n`) : '';
-                            break;
+                        console.log(`${data.user.name}  killed ${heroes[key].user.name}\n`);
 
-                        case "DOWN": checkIfHeroKillAnotherOne(heroes[key].hero, data.hero) ? console.log(`${data.user.name}  killed ${heroes[key].user.name}\n`) : '';
-                            break;
+                        io.emit('hero-was-killed', heroes[key]);
 
-                        case "LEFT": checkIfHeroKillAnotherOne(heroes[key].hero, data.hero) ? console.log(`${data.user.name}  killed ${heroes[key].user.name}\n`) : '';
-                            break;
+                        scores.forEach(score => {
+                            if (score.id == data.user.id) score.value ++;
+                        });
 
-                        case "RIGHT": checkIfHeroKillAnotherOne(heroes[key].hero, data.hero) ? console.log(`${data.user.name}  killed ${heroes[key].user.name}\n`) : '';
-                            break;
-
-                        default: console.log('Unknown movement direction detected!')
+                        io.emit('scores-updated', scores);
                     }
                 }
             });

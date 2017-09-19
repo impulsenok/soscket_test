@@ -1,9 +1,8 @@
 .container
 
     div.col-md-3
-        p Test index page content here
 
-        form
+        form.send-message-form
             input(type="text", maxlength="30", name="message", [(ngModel)]="chatMessage")
 
             button.ui-button-danger(type="submit", (click)="sendSocketMessage()") Send message
@@ -14,4 +13,10 @@
                 span  {{ message.message }}
 
     div.col-md-9
-        playground(#heroesContainer="heroesContainer")
+        playground#battleGround(#heroesContainer="heroesContainer")
+
+        .all-stats
+
+            .player-stats(*ngFor="let score of scores")
+                .player-name {{ score.playerName }}
+                .player-score {{ score.value }}

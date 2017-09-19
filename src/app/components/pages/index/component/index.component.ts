@@ -1,6 +1,6 @@
 import {
     Component, OnInit, ViewChild, ViewContainerRef, ComponentRef,
-    ComponentFactoryResolver, ComponentFactory
+    ComponentFactoryResolver, ComponentFactory, ViewEncapsulation
 }     from "@angular/core";
 
 import { HeroComponent } from "../../../items/hero/hero.component";
@@ -9,12 +9,16 @@ import { SocketService } from "../../../../services/socket.service";
 import {LocalStorageProcessingService} from "../../../../services/local-storage.service";
 import {KeyPressHandlerService} from "../../../../services/keypress-handler.service";
 import {Router} from "@angular/router";
+import {Subscription, Subscription, Subscription} from "rxjs";
+import {DomElementsProcessing} from "../../../../services/dom-processing.service";
+import {HeroService} from "../../../items/hero/hero.service";
 
 
 @Component({
     selector: "index-comp",
     template: require("./index.component.pug"),
-    styleUrls: [ "index.component.scss" ]
+    styleUrls: [ "index.component.scss" ],
+    encapsulation: ViewEncapsulation.None
 })
 
 export class IndexComponent implements OnInit {
@@ -22,20 +26,25 @@ export class IndexComponent implements OnInit {
     @ViewChild('heroesContainer', { read: ViewContainerRef }) container: any;
     componentRef: ComponentRef<Component>;
 
-    private getMessageSUBSCRIBER: any = null;
-    private addNewHeroSUBSCRIBER: any = null;
-    private heroActSUBSCRIBER:    any = null;
+    private heroWasKilledSUBSCRIBER: Subscription = null;
+    private getMessageSUBSCRIBER:    Subscription = null;
+    private addNewHeroSUBSCRIBER:    Subscription = null;
+    private heroActSUBSCRIBER:       Subscription = null;
+    private scoresUpdatedSUBSCRIBER: Subscription = null;
 
     private heroComponentRef: any = null;
 
     public chatMessage: string = null;
     public allMessages: Array<string> = [];
+    public scores: Array<any> = [];
 
     constructor(private router: Router,
                 private socketService: SocketService,
                 private resolver: ComponentFactoryResolver,
                 private localStorage: LocalStorageProcessingService,
-                private keyActionService: KeyPressHandlerService) {}
+                private keyActionService: KeyPressHandlerService,
+                private domProcessing: DomElementsProcessing,
+                private heroService: HeroService) {}
 
     private createHeroComponent(heroesPlayerData: Array<any>): void {
 
@@ -63,6 +72,15 @@ export class IndexComponent implements OnInit {
         this.keyActionService.handleAction(data.eventCode, heroElement, data.heroPlayerData)
     }
 
+    private killHero(heroPlayerData: any): void {
+        let heroElement = document.getElementsByClassName(heroPlayerData.user.id);
+        this.domProcessing.addBloodAfterHeroKill(heroPlayerData.hero);
+        heroPlayerData.hero.positionOnPlayGround.positionOnPlayGroundX = 0;
+        heroPlayerData.hero.positionOnPlayGround.positionOnPlayGroundY = 0;
+        this.heroService.setHeroStyles(heroElement[0], heroPlayerData);
+        this.socketService.saveHeroPlayerData(heroPlayerData);
+    }
+
     ngOnInit(): void {
         // our own hero initialization here
         this.initHero();
@@ -71,6 +89,8 @@ export class IndexComponent implements OnInit {
         // listen if another one hero will be added(another player connected to our game-room)
         this.addNewHeroSUBSCRIBER = this.socketService.newHeroWasAdded().subscribe(heroesPlayerData => this.createHeroComponent(heroesPlayerData));
         this.heroActSUBSCRIBER = this.socketService.listenToHeroAct().subscribe(data => this.handleAction(data))
+        this.heroWasKilledSUBSCRIBER = this.socketService.heroWasKilled().subscribe(heroPlayerData => this.killHero(heroPlayerData));
+        this.scoresUpdatedSUBSCRIBER = this.socketService.scoreUpdate().subscribe(scores => this.scores = scores);
     }
 
     public sendSocketMessage(): void {
@@ -84,5 +104,6 @@ export class IndexComponent implements OnInit {
         if (this.getMessageSUBSCRIBER) this.getMessageSUBSCRIBER.unsubscribe();
         if (this.addNewHeroSUBSCRIBER) this.addNewHeroSUBSCRIBER.unsubscribe();
         if (this.heroActSUBSCRIBER) this.heroActSUBSCRIBER.unsubscribe();
+        if (this.heroWasKilledSUBSCRIBER) this.heroWasKilledSUBSCRIBER.unsubscribe();
     }
 }

@@ -38,13 +38,13 @@ export class KeyPressHandlerService {
             case 39: { this.heroService.moveRight(heroElement, heroPlayerData) }
                 break;
 
-            // SPACE
-            case 32: { this.socket.heroBeatAction(heroPlayerData) }
+            // SPACE; emit only from user who beat another one.
+            case 32: { if (heroPlayerData.user.id == this.localStorage.getPlayerData().id) this.socket.heroBeatAction(heroPlayerData) }
                 break;
 
             default: /*console.log("unhandled key was pressed")*/;
         }
 
-        if (heroPlayerData.user.id == this.localStorage.getPlayerData().id) { this.socket.saveHeroPlayerData(heroPlayerData) }
+        if (heroPlayerData.user.id == this.localStorage.getPlayerData().id) this.socket.saveHeroPlayerData(heroPlayerData);
     }
 }

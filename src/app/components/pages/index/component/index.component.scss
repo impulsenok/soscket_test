@@ -1,6 +1,44 @@
 @import "../../../../../assets/styles/scss/_variables.scss";
 
+#battleGround{
+  display: block;
+  height: 600px;
+  width: 900px;
+}
+
+.send-message-form{
+  margin-top: 5px;
+}
+
 .author{
   font-size: 15px;
   font-weight: 700;
+}
+
+.hero-was-killed-blood {
+  height: 60px;
+  width: 60px;
+  z-index: 15;
+  background: url("../images/blood.png");
+  background-size: 60px 60px;
+  position: absolute;
+}
+
+.all-stats .player-stats {
+  border: 1px solid #efdede;
+  display: inline-block;
+  width: 60px;
+  height: 50px;
+  margin: 2px;
+  padding: 3px;
+  text-align: center;
+}
+
+.player-stats .player-name {
+  font-size: 15px;
+}
+
+.player-stats .player-score {
+    font-weight: 700;
+    font-size: 18px;
 }

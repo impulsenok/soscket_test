@@ -20,6 +20,7 @@ import { KeyPressHandlerService }from "./services/keypress-handler.service";
 import { HeroService }           from "./components/items/hero/hero.service";
 
 import { CONFIG } from "./lib/app.config";
+import {DomElementsProcessing} from "./services/dom-processing.service";
 
 const socketConfig: SocketIoConfig = { url: CONFIG.socketServerUrl, options: {} };
 
@@ -46,7 +47,8 @@ const socketConfig: SocketIoConfig = { url: CONFIG.socketServerUrl, options: {} 
     providers: [
         SocketService,
         KeyPressHandlerService,
-        HeroService
+        HeroService,
+        DomElementsProcessing
     ],
     bootstrap: [
         LayoutComponent

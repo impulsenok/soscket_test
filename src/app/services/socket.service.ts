@@ -22,7 +22,11 @@ export class SocketService {
 
     public heroBeatAction(data: any): void { this.socket.emit('hero-beat', data) }
 
+    public heroWasKilled(): Observable<any> { return this.socket.fromEvent<any>("hero-was-killed").map((heroPlayerData: any) => heroPlayerData) }
+
     public listenToHeroAct(): Observable<any> { return this.socket.fromEvent<any>("hero-acted").map((heroData: any)=> heroData)}
+
+    public scoreUpdate(): Observable<any> { return this.socket.fromEvent<any>("scores-updated").map((scores: any)=> scores)}
 
     public saveHeroPlayerData(data: any): void { this.socket.emit('update-hero-data', data) }
 }
