@@ -146,7 +146,8 @@ module.exports = (server) => {
                 if ((heroes[key].user.name == data.user.name) && (heroes[key].user.id != data.user.id)) {
                     console.log('\n\n this one we need to delete>>>', JSON.stringify(heroes[key]), '\n\n', data.user, '\n\n');
                     // this is the hero to remove from DOM
-                    io.emit('remove-hero-element', {id: heroes[key].user.id})
+                    io.emit('remove-hero-element', {id: heroes[key].user.id});
+                    delete heroes[key];
                 }
             });
 
