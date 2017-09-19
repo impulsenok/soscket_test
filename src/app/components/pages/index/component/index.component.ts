@@ -31,6 +31,7 @@ export class IndexComponent implements OnInit {
     private addNewHeroSUBSCRIBER:    Subscription = null;
     private heroActSUBSCRIBER:       Subscription = null;
     private scoresUpdatedSUBSCRIBER: Subscription = null;
+    private removeHeroElementSUBSCRIBER: Subscription = null;
 
     private heroComponentRef: any = null;
 
@@ -55,7 +56,6 @@ export class IndexComponent implements OnInit {
                 this.heroComponentRef.instance.data = heroPlayerData;
             });
         } else {
-
             this.router.navigate(['settings']);
         }
     }
@@ -68,17 +68,15 @@ export class IndexComponent implements OnInit {
     }
 
     private handleAction(data: any): void {
-        const heroElement = document.getElementsByClassName(data.heroPlayerData.user.id);
+        const heroElement = document.getElementById(data.heroPlayerData.user.id);
         this.keyActionService.handleAction(data.eventCode, heroElement, data.heroPlayerData)
     }
 
-    private killHero(heroPlayerData: any): void {
-        let heroElement = document.getElementsByClassName(heroPlayerData.user.id);
-        this.domProcessing.addBloodAfterHeroKill(heroPlayerData.hero);
-        heroPlayerData.hero.positionOnPlayGround.positionOnPlayGroundX = 0;
-        heroPlayerData.hero.positionOnPlayGround.positionOnPlayGroundY = 0;
-        this.heroService.setHeroStyles(heroElement[0], heroPlayerData);
-        this.socketService.saveHeroPlayerData(heroPlayerData);
+    private killHero(data: any): void {
+        let heroElement = document.getElementById(data.heroPlayerData.user.id);
+        this.domProcessing.addBloodAfterHeroKill(data.blood);
+        this.heroService.setHeroStyles(heroElement, data.heroPlayerData);
+        this.socketService.saveHeroPlayerData(data.heroPlayerData);
     }
 
     ngOnInit(): void {
@@ -88,9 +86,10 @@ export class IndexComponent implements OnInit {
 
         // listen if another one hero will be added(another player connected to our game-room)
         this.addNewHeroSUBSCRIBER = this.socketService.newHeroWasAdded().subscribe(heroesPlayerData => this.createHeroComponent(heroesPlayerData));
-        this.heroActSUBSCRIBER = this.socketService.listenToHeroAct().subscribe(data => this.handleAction(data))
-        this.heroWasKilledSUBSCRIBER = this.socketService.heroWasKilled().subscribe(heroPlayerData => this.killHero(heroPlayerData));
-        this.scoresUpdatedSUBSCRIBER = this.socketService.scoreUpdate().subscribe(scores => this.scores = scores);
+        this.heroActSUBSCRIBER = this.socketService.listenToHeroAct().subscribe(data => this.handleAction(data));
+        this.heroWasKilledSUBSCRIBER = this.socketService.heroWasKilled().subscribe(data => this.killHero(data));
+        this.scoresUpdatedSUBSCRIBER = this.socketService.scoreUpdate().subscribe(scores => this.scores = scores.sort((a, b) => a.value - b.value));
+        this.removeHeroElementSUBSCRIBER = this.socketService.removeHeroElement().subscribe((id: any) => this.domProcessing.deleteHeroElement(id.id))
     }
 
     public sendSocketMessage(): void {
@@ -105,5 +104,6 @@ export class IndexComponent implements OnInit {
         if (this.addNewHeroSUBSCRIBER) this.addNewHeroSUBSCRIBER.unsubscribe();
         if (this.heroActSUBSCRIBER) this.heroActSUBSCRIBER.unsubscribe();
         if (this.heroWasKilledSUBSCRIBER) this.heroWasKilledSUBSCRIBER.unsubscribe();
+        if (this.removeHeroElementSUBSCRIBER) this.removeHeroElementSUBSCRIBER.unsubscribe();
     }
 }

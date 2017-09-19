@@ -11,9 +11,9 @@ export class KeyPressHandlerService {
                 private localStorage: LocalStorageProcessingService,
                 private socket: SocketService) {}
 
-    public handleAction(keyCode: number, heroEl: any, heroPlayerData: any): void {
+    public handleAction(keyCode: number, heroElement: any, heroPlayerData: any): void {
 
-        let heroElement = heroEl[0];
+        // let heroElement = heroEl[0];
 
         if (!heroElement) return;
 

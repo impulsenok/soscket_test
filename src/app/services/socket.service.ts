@@ -28,5 +28,7 @@ export class SocketService {
 
     public scoreUpdate(): Observable<any> { return this.socket.fromEvent<any>("scores-updated").map((scores: any)=> scores)}
 
+    public removeHeroElement(): Observable<any> { return this.socket.fromEvent<any>("remove-hero-element").map((heroId: string)=> heroId)}
+
     public saveHeroPlayerData(data: any): void { this.socket.emit('update-hero-data', data) }
 }

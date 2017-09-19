@@ -77,9 +77,9 @@ module.exports = (server) => {
                 // broadcast to all subscribers if new hero appeared
                 heroes[playerData.id].emitted = true;
                 io.emit('receive-new-hero', { heroes: [heroes[playerData.id]] });
-                scores.push({id: playerData.id, playerName: playerData.name, value: 0});
-                // we should broadcast it only for current player(who refresh the page, for example)
+                if (scores.filter(score => score.playerName == playerData.name).length == 0) scores.push({id: playerData.id, playerName: playerData.name, value: 0});
             } else {
+                // we should broadcast it only for current player(who refresh the page, for example)
                 // in case we've restarted our server, all heroes data will be lost.
                 socket.emit('scores-updated', scores);
                 socket.emit('receive-new-hero', { heroes: heroes[playerData.id] ? [heroes[playerData.id]] : undefined });
@@ -114,10 +114,22 @@ module.exports = (server) => {
 
                         console.log(`${data.user.name}  killed ${heroes[key].user.name}\n`);
 
-                        io.emit('hero-was-killed', heroes[key]);
+                        //remember hero position for blood location;
+                        let bloodPosition = {
+                            positionOnPlayGroundX: heroes[key].hero.positionOnPlayGround.positionOnPlayGroundX,
+                            positionOnPlayGroundY: heroes[key].hero.positionOnPlayGround.positionOnPlayGroundY
+                        };
+
+                        //generate random hero spot location;
+                        heroes[key].hero.positionOnPlayGround = {
+                            positionOnPlayGroundX: Math.floor(Math.random() * (850 - 1) + 1),
+                            positionOnPlayGroundY: Math.floor(Math.random() * (550 - 1) + 1)
+                        };
+
+                        io.emit('hero-was-killed', {heroPlayerData: heroes[key], blood: bloodPosition});
 
                         scores.forEach(score => {
-                            if (score.id == data.user.id) score.value ++;
+                            if (score.playerName == data.user.name) score.value ++;
                         });
 
                         io.emit('scores-updated', scores);
@@ -127,7 +139,19 @@ module.exports = (server) => {
 
         });
 
-        socket.on('update-hero-data', data => { heroes[data.user.id] = data });
+        socket.on('update-hero-data', data => { {
+
+            // in case when user return to settings page during game session to avoid multiple heroes instances situation for one player;
+            Object.keys(heroes).forEach(key => {
+                if ((heroes[key].user.name == data.user.name) && (heroes[key].user.id != data.user.id)) {
+                    console.log('\n\n this one we need to delete>>>', JSON.stringify(heroes[key]), '\n\n', data.user, '\n\n');
+                    // this is the hero to remove from DOM
+                    io.emit('remove-hero-element', {id: heroes[key].user.id})
+                }
+            });
+
+            heroes[data.user.id] = data
+        } });
     });
 
     return (req, res, next) =>  next();
