@@ -1,13 +1,29 @@
 @import "../../../../../assets/styles/scss/_variables.scss";
 
 .settings{
-  margin-top: 40px;
+  margin-top: 10px;
   font-size: 20px;
+}
+
+.delimitter{
+  height: 1px;
+  background-color: grey;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.bold{
+  font-weight: 800;
+}
+
+.set-name-desc{
+  font-size: 19px;
 }
 
 .hero {
   padding: 5px;
   margin-right: 3px;
+  height: 110px;
 }
 
 .hero.selected {
@@ -23,4 +39,20 @@
   height: 32px;
   width: 32px;
   margin-right: 10px;
+}
+
+.choose-hero-text{
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.hero-desc{
+  font-size: 15px;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.btn-info:disabled {
+  background-color: grey!important;
 }

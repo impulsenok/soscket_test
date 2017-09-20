@@ -1,6 +1,6 @@
 .container
 
-    div.col-md-3
+    //div.col-md-3
 
         form.send-message-form
             input(type="text", maxlength="30", name="message", [(ngModel)]="chatMessage")
@@ -12,7 +12,7 @@
                 span.author {{message.user}}:
                 span  {{ message.message }}
 
-    div.col-md-9
+    div.col-md-12
         playground#battleGround(#heroesContainer="heroesContainer")
 
         .all-stats

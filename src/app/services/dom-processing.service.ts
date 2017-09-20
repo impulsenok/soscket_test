@@ -5,9 +5,11 @@ export class DomElementsProcessing {
     public addBloodAfterHeroKill(data: any): void {
 
         let battleFiled = document.getElementById('battleGround');
-
+        // get rand number 1..5 (5 blood pictures types)
+        let bloodIndex = Math.floor(Math.random() * (5 - 1) + 1);
         let blood = document.createElement("div");
-        blood.className = "hero-was-killed-blood";
+
+        blood.className = `hero-was-killed-blood-${bloodIndex}`;
         blood.style.top = `${data.positionOnPlayGroundY - 20}px`;
         blood.style.left= `${data.positionOnPlayGroundX - 10}px`;
 
@@ -15,7 +17,7 @@ export class DomElementsProcessing {
 
         setTimeout(() => {
             battleFiled.removeChild(blood);
-        }, 3000);
+        }, 5000);
     }
     public deleteHeroElement(id: string): void {
 

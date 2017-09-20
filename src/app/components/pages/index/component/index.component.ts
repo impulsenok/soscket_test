@@ -88,7 +88,7 @@ export class IndexComponent implements OnInit {
         this.addNewHeroSUBSCRIBER = this.socketService.newHeroWasAdded().subscribe(heroesPlayerData => this.createHeroComponent(heroesPlayerData));
         this.heroActSUBSCRIBER = this.socketService.listenToHeroAct().subscribe(data => this.handleAction(data));
         this.heroWasKilledSUBSCRIBER = this.socketService.heroWasKilled().subscribe(data => this.killHero(data));
-        this.scoresUpdatedSUBSCRIBER = this.socketService.scoreUpdate().subscribe(scores => this.scores = scores.sort((a, b) => a.value - b.value));
+        this.scoresUpdatedSUBSCRIBER = this.socketService.scoreUpdate().subscribe(scores => this.scores = scores.sort((a, b) => b.value - a.value));
         this.removeHeroElementSUBSCRIBER = this.socketService.removeHeroElement().subscribe((id: any) => this.domProcessing.deleteHeroElement(id.id))
     }
 

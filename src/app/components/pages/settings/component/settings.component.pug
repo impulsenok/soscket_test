@@ -4,19 +4,34 @@
 
         .text-center
 
-            p Set up your super nickname!
+            p.set-name-desc Введите свое грозное <b>имя и выберите героя</b>(появится кнопа), а бует <b>прикольнее</b> если вы введете свое уникальнейшее корпаративное имя(ab, vs, em, vta...)
 
             input(type="text", name="nickname", [(ngModel)]="user.name", maxlength="5", placeholder="max 5 symbols")
 
-            p chooooose your super-hero then!!!
+            .delimitter
+
+            p.choose-hero-text chooooose your super-hero below!!!
 
         .col-md-3(*ngFor="let hero of heroes")
             .hero((click)="selectHero(hero)", [ngClass]="{'selected': checkIfHeroSelected(hero)}")
                 img([ngStyle]="setHeroStyle(hero)")
                 | {{ hero.name }}
+                p.hero-desc {{ hero.description }}
 
         .clearfix
+
+        .delimitter
+
+        br
+        .col-lg-12
+            p Леша А, да тут будут косяки, некрасиво назван класс в стилях или если 50 раз обновить страницу чтот сломается))) Я делал это сам, тестировал на 95% сам, и времени было немного. Будь человеком, просто замочи когонить!(я про игру если что)
+        .clearfix
+
+        .delimitter
+
+        .col-lg-12
+            p.text-center <b>Двигаемся стрелочками</b>, что бы когот <b>замахать - жмите SPACE</b>(ну... ПРАБЕЛ по-русски), если вы находитель в <b>непосредственной близости</b>!
         br
 
         .text-center
-            button(routerLink="/fun", (click)="saveData()", *ngIf="validate()") Let's fuuuun yeeeahhhh mazafaka!!!
+            button.btn-info(routerLink="/fun", (click)="saveData()", [disabled]="!validate()") Let's have some fuuuun yeeeahhhh mazafaka!!!
