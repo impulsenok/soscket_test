@@ -29,8 +29,8 @@ export const CONFIG = {
                 }
             },
             positionOnPlayGround: {
-                positionOnPlayGroundY: 0,
-                positionOnPlayGroundX: 0
+                positionOnPlayGroundY: 20,
+                positionOnPlayGroundX: 200
             }
         },
         'death': {
@@ -60,8 +60,8 @@ export const CONFIG = {
                 }
             },
             positionOnPlayGround: {
-                positionOnPlayGroundY: 0,
-                positionOnPlayGroundX: 0
+                positionOnPlayGroundY: 20,
+                positionOnPlayGroundX: 330
             }
         },
         'blue_vampire': {
@@ -91,8 +91,8 @@ export const CONFIG = {
                 }
             },
             positionOnPlayGround: {
-                positionOnPlayGroundY: 0,
-                positionOnPlayGroundX: 0
+                positionOnPlayGroundY: 20,
+                positionOnPlayGroundX: 350
             }
         },
         'viking': {
@@ -122,8 +122,8 @@ export const CONFIG = {
                 }
             },
             positionOnPlayGround: {
-                positionOnPlayGroundY: 0,
-                positionOnPlayGroundX: 0
+                positionOnPlayGroundY: 20,
+                positionOnPlayGroundX: 400
             }
         },
         'mummy': {
@@ -153,8 +153,8 @@ export const CONFIG = {
                 }
             },
             positionOnPlayGround: {
-                positionOnPlayGroundY: 0,
-                positionOnPlayGroundX: 0
+                positionOnPlayGroundY: 20,
+                positionOnPlayGroundX: 500
             }
         },
         'knight': {
@@ -184,8 +184,8 @@ export const CONFIG = {
                 }
             },
             positionOnPlayGround: {
-                positionOnPlayGroundY: 0,
-                positionOnPlayGroundX: 0
+                positionOnPlayGroundY: 20,
+                positionOnPlayGroundX: 50
             }
         },
         'girl_yellow': {
@@ -215,8 +215,8 @@ export const CONFIG = {
                 }
             },
             positionOnPlayGround: {
-                positionOnPlayGroundY: 0,
-                positionOnPlayGroundX: 0
+                positionOnPlayGroundY: 20,
+                positionOnPlayGroundX: 660
             }
         },
         'dark_one': {
@@ -246,8 +246,8 @@ export const CONFIG = {
                 }
             },
             positionOnPlayGround: {
-                positionOnPlayGroundY: 0,
-                positionOnPlayGroundX: 0
+                positionOnPlayGroundY: 20,
+                positionOnPlayGroundX: 700
             }
         },
         'mego_mosg': {
@@ -277,8 +277,8 @@ export const CONFIG = {
                 }
             },
             positionOnPlayGround: {
-                positionOnPlayGroundY: 0,
-                positionOnPlayGroundX: 0
+                positionOnPlayGroundY: 20,
+                positionOnPlayGroundX: 75
             }
         },
         'ko_ko_ko': {
@@ -308,8 +308,8 @@ export const CONFIG = {
                 }
             },
             positionOnPlayGround: {
-                positionOnPlayGroundY: 0,
-                positionOnPlayGroundX: 0
+                positionOnPlayGroundY: 20,
+                positionOnPlayGroundX: 470
             }
         }
     }

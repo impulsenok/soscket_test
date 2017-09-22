@@ -32,7 +32,7 @@ export class HeroService {
 
         this.heroMovementAnimation(heroElement, heroPlayerData);
 
-        if (heroPlayerData.hero.positionOnPlayGround.positionOnPlayGroundY > 10) {
+        if (heroPlayerData.hero.positionOnPlayGround.positionOnPlayGroundY > 20) {
             heroElement.style.backgroundPositionY = `-${(heroPlayerData.hero.sprite.topMove.row - 1) * heroPlayerData.hero.oneFrameHeight}px`;
             heroPlayerData.hero.positionOnPlayGround.positionOnPlayGroundY -= heroPlayerData.hero.stepLength;
             heroElement.style.top = `${heroPlayerData.hero.positionOnPlayGround.positionOnPlayGroundY}px`;

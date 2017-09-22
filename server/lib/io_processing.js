@@ -66,19 +66,38 @@ module.exports = (server) => {
 
         io.clients((err, clients) => { console.log('\n\n \n\n', clients, '\n\n\n') });
 
-        socket.on('disconnect', subscriber => console.log('\n User disconnected:  \n', subscriber, '\n\n\n'));
+        socket.on('disconnect', subscriber => {
+            console.log('\n User disconnected:  \n', socket.id, '\n\n\n');
+
+            console.log('>>>> ', JSON.stringify(heroes, null, 4), '\n\n');
+            
+            Object.keys(heroes).forEach(key => {
+
+                if (heroes[key].user.socketId == socket.id) {
+                    console.log('\n>>>> ',heroes[key].user, '<<<>>>>\n', socket.id, '\n');
+                    // this is the hero to remove from DOM
+                    io.emit('remove-hero-element', {id: heroes[key].user.id});
+                    delete heroes[key];
+                }
+            });
+
+        });
 
         socket.on('save-message', (data) => { io.emit('new-message', {user: data.user, message: data.message}) });
 
         socket.on('create-hero', (playerData) => {
 
+            console.log('\n\n>>>> hew hero here', playerData);
+
             // if hero was already added, no need to broadcast it to all players
             if (heroes[playerData.id] && !heroes[playerData.id].emitted) {
+                console.log('\n\n111>>>> emit all');
                 // broadcast to all subscribers if new hero appeared
                 heroes[playerData.id].emitted = true;
                 io.emit('receive-new-hero', { heroes: [heroes[playerData.id]] });
                 if (scores.filter(score => score.playerName == playerData.name).length == 0) scores.push({id: playerData.id, playerName: playerData.name, value: 0});
             } else {
+                console.log('\n\n222>>>> emit not all');
                 // we should broadcast it only for current player(who refresh the page, for example)
                 // in case we've restarted our server, all heroes data will be lost.
                 socket.emit('scores-updated', scores);
@@ -144,14 +163,19 @@ module.exports = (server) => {
             // in case when user return to settings page during game session to avoid multiple heroes instances situation for one player;
             Object.keys(heroes).forEach(key => {
                 if ((heroes[key].user.name == data.user.name) && (heroes[key].user.id != data.user.id)) {
-                    console.log('\n\n this one we need to delete>>>', JSON.stringify(heroes[key]), '\n\n', data.user, '\n\n');
+
                     // this is the hero to remove from DOM
                     io.emit('remove-hero-element', {id: heroes[key].user.id});
                     delete heroes[key];
+                    return;
                 }
             });
 
+            // console.log('\n\n here we are to update data:\n ', JSON.stringify(data, null, 4), '\n >>>>', socket.id, '\n');
+
+            if (!data.user.socketId) data.user.socketId = socket.id;
             heroes[data.user.id] = data
+
         } });
     });
 

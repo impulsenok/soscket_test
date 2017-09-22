@@ -1,6 +1,8 @@
 @import "../../../../../assets/styles/scss/_variables.scss";
 
 #battleGround {
+  position: relative;
+  margin-top: 15px;
   display: block;
   height: 600px;
   width: 1200px;

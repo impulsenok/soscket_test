@@ -24,7 +24,7 @@ export class DomElementsProcessing {
         let heroElement = document.getElementById(id);
 
         if (heroElement) {
-            heroElement.parentNode.parentNode.removeChild(heroElement.parentNode)
+            heroElement.parentNode.removeChild(heroElement)
         }
     }
 }

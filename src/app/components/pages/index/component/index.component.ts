@@ -48,9 +48,9 @@ export class IndexComponent implements OnInit {
                 private heroService: HeroService) {}
 
     private createHeroComponent(heroesPlayerData: Array<any>): void {
-
         if (heroesPlayerData && heroesPlayerData.length > 0) {
             heroesPlayerData.forEach((heroPlayerData: any) => {
+                console.log('>>>> create new hero here: ', heroesPlayerData);
                 const factory: ComponentFactory<Component> = this.resolver.resolveComponentFactory(HeroComponent);
                 this.heroComponentRef = this.container.createComponent(factory);
                 this.heroComponentRef.instance.data = heroPlayerData;
