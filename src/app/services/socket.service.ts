@@ -31,4 +31,6 @@ export class SocketService {
     public removeHeroElement(): Observable<any> { return this.socket.fromEvent<any>("remove-hero-element").map((heroId: string)=> heroId)}
 
     public saveHeroPlayerData(data: any): void { this.socket.emit('update-hero-data', data) }
+
+    public checkPlayerHero(playerData: any): void { this.socket.emit('check-if-player-hero-exists', playerData) }
 }

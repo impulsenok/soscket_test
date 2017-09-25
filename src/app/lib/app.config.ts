@@ -1,6 +1,6 @@
 export const CONFIG = {
-    socketServerUrl: 'http://172.16.1.159:8609',
-    // socketServerUrl: 'localhost:8609',
+    // socketServerUrl: 'http://172.16.1.159:8609',
+    socketServerUrl: 'localhost:8609',
     heroes: {
         'death_king': {
             name: 'DEATH KING',

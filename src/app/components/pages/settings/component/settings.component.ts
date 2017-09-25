@@ -4,6 +4,8 @@ import { CONFIG } from "../../../../lib/app.config";
 import {LocalStorageProcessingService} from "../../../../services/local-storage.service";
 import {SettingsService} from "./settings.service";
 import {SocketService} from "../../../../services/socket.service";
+import {Subscription} from "rxjs";
+import {Router} from "@angular/router";
 
 interface User {
     name: string;
@@ -30,6 +32,8 @@ export class SettingsComponent implements OnInit {
     ngOnInit(): void {
         Object.keys(CONFIG.heroes).forEach(key => { this.heroes.push(CONFIG.heroes[key]) });
         this.user = { name: this.localStorage.getPlayerData() ? this.localStorage.getPlayerData().name : '' };
+
+        if (this.localStorage.getPlayerData()) this.socket.checkPlayerHero(this.localStorage.getPlayerData());
     }
 
     setHeroStyle(hero: any): any {
